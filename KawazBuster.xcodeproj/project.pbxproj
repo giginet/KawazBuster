@@ -25,6 +25,7 @@
 		074CB05713A757E4006FB6EC /* title_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04D13A757E4006FB6EC /* title_background.png */; };
 		074CB05B13A759A7006FB6EC /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB05A13A759A5006FB6EC /* TitleScene.m */; };
 		074CB05E13A759E4006FB6EC /* LogoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB05D13A759E3006FB6EC /* LogoScene.m */; };
+		076A4E3E13A770AE00C04B06 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A4E3D13A770AE00C04B06 /* MainScene.m */; };
 		07FC8FD1138EAEE5000D5ADB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD0138EAEE5000D5ADB /* QuartzCore.framework */; };
 		07FC8FD3138EAEE5000D5ADB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD2138EAEE5000D5ADB /* OpenGLES.framework */; };
 		07FC8FD5138EAEE5000D5ADB /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD4138EAEE5000D5ADB /* OpenAL.framework */; };
@@ -141,7 +142,6 @@
 		07FC9137138EAEE8000D5ADB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9136138EAEE8000D5ADB /* RootViewController.m */; };
 		07FC913A138EAEE8000D5ADB /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */; };
 		07FC9145138EB276000D5ADB /* kawaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FC9144138EB276000D5ADB /* kawaz.png */; };
-		07FC91C913901579000D5ADB /* MainLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC91C813901578000D5ADB /* MainLayer.m */; };
 		07FC91CC139015FB000D5ADB /* Kawaz.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC91CB139015FA000D5ADB /* Kawaz.m */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +173,8 @@
 		074CB05A13A759A5006FB6EC /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
 		074CB05C13A759E1006FB6EC /* LogoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoScene.h; sourceTree = "<group>"; };
 		074CB05D13A759E3006FB6EC /* LogoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoScene.m; sourceTree = "<group>"; };
+		076A4E3C13A770AD00C04B06 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		076A4E3D13A770AE00C04B06 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
 		07FC8FCC138EAEE5000D5ADB /* KawazBuster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KawazBuster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FC8FD0138EAEE5000D5ADB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		07FC8FD2138EAEE5000D5ADB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -409,8 +411,6 @@
 		07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		07FC913B138EAEE8000D5ADB /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		07FC9144138EB276000D5ADB /* kawaz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawaz.png; sourceTree = "<group>"; };
-		07FC91C713901577000D5ADB /* MainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLayer.h; sourceTree = "<group>"; };
-		07FC91C813901578000D5ADB /* MainLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLayer.m; sourceTree = "<group>"; };
 		07FC91CA139015F9000D5ADB /* Kawaz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kawaz.h; sourceTree = "<group>"; };
 		07FC91CB139015FA000D5ADB /* Kawaz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kawaz.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -519,14 +519,14 @@
 		07FC8FE0138EAEE5000D5ADB /* KawazBuster */ = {
 			isa = PBXGroup;
 			children = (
+				076A4E3C13A770AD00C04B06 /* MainScene.h */,
+				076A4E3D13A770AE00C04B06 /* MainScene.m */,
 				074CB05C13A759E1006FB6EC /* LogoScene.h */,
 				074CB05D13A759E3006FB6EC /* LogoScene.m */,
 				074CB05913A759A4006FB6EC /* TitleScene.h */,
 				074CB05A13A759A5006FB6EC /* TitleScene.m */,
 				07FC91CA139015F9000D5ADB /* Kawaz.h */,
 				07FC91CB139015FA000D5ADB /* Kawaz.m */,
-				07FC91C713901577000D5ADB /* MainLayer.h */,
-				07FC91C813901578000D5ADB /* MainLayer.m */,
 				07FC9132138EAEE8000D5ADB /* AppDelegate.h */,
 				07FC9133138EAEE8000D5ADB /* AppDelegate.m */,
 				07FC9135138EAEE8000D5ADB /* RootViewController.h */,
@@ -925,6 +925,7 @@
 		07FC8FC3138EAEE4000D5ADB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = Kawaz;
 			};
 			buildConfigurationList = 07FC8FC6138EAEE4000D5ADB /* Build configuration list for PBXProject "KawazBuster" */;
@@ -1077,7 +1078,6 @@
 				07FC9134138EAEE8000D5ADB /* AppDelegate.m in Sources */,
 				07FC9137138EAEE8000D5ADB /* RootViewController.m in Sources */,
 				07FC913A138EAEE8000D5ADB /* HelloWorldLayer.m in Sources */,
-				07FC91C913901579000D5ADB /* MainLayer.m in Sources */,
 				07FC91CC139015FB000D5ADB /* Kawaz.m in Sources */,
 				074CB03713A7539A006FB6EC /* KWAnimation.m in Sources */,
 				074CB03813A7539A006FB6EC /* KWScene.m in Sources */,
@@ -1087,6 +1087,7 @@
 				074CB03C13A7539A006FB6EC /* KWVector.m in Sources */,
 				074CB05B13A759A7006FB6EC /* TitleScene.m in Sources */,
 				074CB05E13A759E4006FB6EC /* LogoScene.m in Sources */,
+				076A4E3E13A770AE00C04B06 /* MainScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1106,6 +1107,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -1121,6 +1123,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;

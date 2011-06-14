@@ -7,6 +7,7 @@
 //
 
 #import "TitleScene.h"
+#import "MainScene.h"
 
 /*
  無名カテゴリ
@@ -39,10 +40,10 @@
     logo_ = [[KWSprite alloc] initWithFile:@"logo.png"];
     logo_.position = ccp(winSize.width/2, 260);
     // メニューの定義
-    CCMenuItemImage* start = [CCMenuItemImage itemFromNormalImage:@"start.png" 
-                                                    selectedImage:@"start.png" 
-                                                           target:self 
-                                                         selector:@selector(pressStartButton:)];
+    CCMenuItemImage* start = [CCMenuItemImage itemFromNormalImage:@"start.png" // 通常時の画像 
+                                                    selectedImage:@"start.png" // 押したときの画像
+                                                           target:self         // 押したときに呼び出すメソッドがどこにあるか
+                                                         selector:@selector(pressStartButton:)]; // 押したときに呼び出すメソッド
     CCMenuItemImage* exit  = [CCMenuItemImage itemFromNormalImage:@"exit.png" 
                                                     selectedImage:@"exit.png" 
                                                            target:self 
@@ -53,7 +54,7 @@
                                                          selector:@selector(pressHowtoButton:)];
     CCMenu* menu = [CCMenu menuWithItems:howto, start, exit, nil]; // 生成した各MenuItemからメニューを作る
     [menu alignItemsHorizontally]; // メニューを横並びにする
-    menu.position = ccp(winSize.width/2, 40);
+    menu.position = ccp(winSize.width/2, 40); // メニューの中心位置を設定
     // レイヤーに追加
     [self addChild:background];
     [self addChild:logo_];
@@ -63,6 +64,9 @@
 }
 
 - (void)pressStartButton:(id)sender{
+  CCScene* mainScene = [MainScene scene];
+  CCTransitionFade* transition = [CCTransitionZoomFlipAngular transitionWithDuration:0.5f scene:mainScene];
+  [[CCDirector sharedDirector] replaceScene:transition];
 }
 
 - (void)pressExitButton:(id)sender{
