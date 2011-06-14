@@ -70,8 +70,13 @@
 	[director setOpenGLView:glView];
 	
 //	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-//	if( ! [director enableRetinaDisplay:YES] )
-//		CCLOG(@"Retina Display Not supported");
+/* 
+ ここのコメントアウトを外してやると、Retinaディスプレイに対応になる
+ その場合、'-hd'のsuffixを付けた、解像度2倍の画像を用意してやる必要がある
+ ref:http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide%3ahow_to_develop_retinadisplay_games_in_cocos2d
+ */
+	if( ! [director enableRetinaDisplay:YES] )
+		CCLOG(@"Retina Display Not supported");
 	
 	//
 	// VERY IMPORTANT:
