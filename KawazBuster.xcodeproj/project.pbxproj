@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074CB03713A7539A006FB6EC /* KWAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB02C13A75399006FB6EC /* KWAnimation.m */; };
+		074CB03813A7539A006FB6EC /* KWScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB02E13A75399006FB6EC /* KWScene.m */; };
+		074CB03913A7539A006FB6EC /* KWSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB03013A75399006FB6EC /* KWSingleton.m */; };
+		074CB03A13A7539A006FB6EC /* KWSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB03213A75399006FB6EC /* KWSprite.m */; };
+		074CB03B13A7539A006FB6EC /* KWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB03413A7539A006FB6EC /* KWTimer.m */; };
+		074CB03C13A7539A006FB6EC /* KWVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB03613A7539A006FB6EC /* KWVector.m */; };
 		07FC8FD1138EAEE5000D5ADB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD0138EAEE5000D5ADB /* QuartzCore.framework */; };
 		07FC8FD3138EAEE5000D5ADB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD2138EAEE5000D5ADB /* OpenGLES.framework */; };
 		07FC8FD5138EAEE5000D5ADB /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD4138EAEE5000D5ADB /* OpenAL.framework */; };
@@ -124,15 +130,25 @@
 		07FC913A138EAEE8000D5ADB /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */; };
 		07FC9143138EB150000D5ADB /* LogoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9142138EB150000D5ADB /* LogoLayer.m */; };
 		07FC9145138EB276000D5ADB /* kawaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FC9144138EB276000D5ADB /* kawaz.png */; };
-		07FC914D138EB6BE000D5ADB /* KWSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9148138EB6BE000D5ADB /* KWSingleton.m */; };
-		07FC914E138EB6BE000D5ADB /* KWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC914A138EB6BE000D5ADB /* KWTimer.m */; };
-		07FC914F138EB6BE000D5ADB /* KWVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC914C138EB6BE000D5ADB /* KWVector.m */; };
 		07FC9154138EBA60000D5ADB /* TitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9153138EBA5E000D5ADB /* TitleLayer.m */; };
 		07FC91C913901579000D5ADB /* MainLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC91C813901578000D5ADB /* MainLayer.m */; };
 		07FC91CC139015FB000D5ADB /* Kawaz.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC91CB139015FA000D5ADB /* Kawaz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		074CB02A13A75380006FB6EC /* kwing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kwing.h; path = libs/kwing/kwing.h; sourceTree = "<group>"; };
+		074CB02B13A75399006FB6EC /* KWAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWAnimation.h; path = libs/kwing/KWAnimation.h; sourceTree = "<group>"; };
+		074CB02C13A75399006FB6EC /* KWAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWAnimation.m; path = libs/kwing/KWAnimation.m; sourceTree = "<group>"; };
+		074CB02D13A75399006FB6EC /* KWScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWScene.h; path = libs/kwing/KWScene.h; sourceTree = "<group>"; };
+		074CB02E13A75399006FB6EC /* KWScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWScene.m; path = libs/kwing/KWScene.m; sourceTree = "<group>"; };
+		074CB02F13A75399006FB6EC /* KWSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWSingleton.h; path = libs/kwing/KWSingleton.h; sourceTree = "<group>"; };
+		074CB03013A75399006FB6EC /* KWSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWSingleton.m; path = libs/kwing/KWSingleton.m; sourceTree = "<group>"; };
+		074CB03113A75399006FB6EC /* KWSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWSprite.h; path = libs/kwing/KWSprite.h; sourceTree = "<group>"; };
+		074CB03213A75399006FB6EC /* KWSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWSprite.m; path = libs/kwing/KWSprite.m; sourceTree = "<group>"; };
+		074CB03313A75399006FB6EC /* KWTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWTimer.h; path = libs/kwing/KWTimer.h; sourceTree = "<group>"; };
+		074CB03413A7539A006FB6EC /* KWTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWTimer.m; path = libs/kwing/KWTimer.m; sourceTree = "<group>"; };
+		074CB03513A7539A006FB6EC /* KWVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWVector.h; path = libs/kwing/KWVector.h; sourceTree = "<group>"; };
+		074CB03613A7539A006FB6EC /* KWVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWVector.m; path = libs/kwing/KWVector.m; sourceTree = "<group>"; };
 		07FC8FCC138EAEE5000D5ADB /* KawazBuster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KawazBuster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FC8FD0138EAEE5000D5ADB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		07FC8FD2138EAEE5000D5ADB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -371,13 +387,6 @@
 		07FC9141138EB150000D5ADB /* LogoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogoLayer.h; path = ../LogoLayer.h; sourceTree = "<group>"; };
 		07FC9142138EB150000D5ADB /* LogoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoLayer.m; path = ../LogoLayer.m; sourceTree = "<group>"; };
 		07FC9144138EB276000D5ADB /* kawaz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawaz.png; sourceTree = "<group>"; };
-		07FC9147138EB6BE000D5ADB /* KWSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSingleton.h; sourceTree = "<group>"; };
-		07FC9148138EB6BE000D5ADB /* KWSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSingleton.m; sourceTree = "<group>"; };
-		07FC9149138EB6BE000D5ADB /* KWTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWTimer.h; sourceTree = "<group>"; };
-		07FC914A138EB6BE000D5ADB /* KWTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWTimer.m; sourceTree = "<group>"; };
-		07FC914B138EB6BE000D5ADB /* KWVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWVector.h; sourceTree = "<group>"; };
-		07FC914C138EB6BE000D5ADB /* KWVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWVector.m; sourceTree = "<group>"; };
-		07FC9151138EB765000D5ADB /* kwing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kwing.h; sourceTree = "<group>"; };
 		07FC9152138EBA5D000D5ADB /* TitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLayer.h; sourceTree = "<group>"; };
 		07FC9153138EBA5E000D5ADB /* TitleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleLayer.m; sourceTree = "<group>"; };
 		07FC91C713901577000D5ADB /* MainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLayer.h; sourceTree = "<group>"; };
@@ -405,6 +414,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		074CB02913A75368006FB6EC /* sprite */ = {
+			isa = PBXGroup;
+			children = (
+				074CB02B13A75399006FB6EC /* KWAnimation.h */,
+				074CB02C13A75399006FB6EC /* KWAnimation.m */,
+				074CB03113A75399006FB6EC /* KWSprite.h */,
+				074CB03213A75399006FB6EC /* KWSprite.m */,
+			);
+			name = sprite;
+			sourceTree = "<group>";
+		};
 		07FC8FC1138EAEE4000D5ADB = {
 			isa = PBXGroup;
 			children = (
@@ -795,7 +815,10 @@
 		07FC9146138EB665000D5ADB /* Kwing */ = {
 			isa = PBXGroup;
 			children = (
-				07FC9151138EB765000D5ADB /* kwing.h */,
+				074CB02D13A75399006FB6EC /* KWScene.h */,
+				074CB02E13A75399006FB6EC /* KWScene.m */,
+				074CB02A13A75380006FB6EC /* kwing.h */,
+				074CB02913A75368006FB6EC /* sprite */,
 				07FC9150138EB6CC000D5ADB /* utils */,
 			);
 			name = Kwing;
@@ -804,12 +827,12 @@
 		07FC9150138EB6CC000D5ADB /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				07FC9147138EB6BE000D5ADB /* KWSingleton.h */,
-				07FC9148138EB6BE000D5ADB /* KWSingleton.m */,
-				07FC9149138EB6BE000D5ADB /* KWTimer.h */,
-				07FC914A138EB6BE000D5ADB /* KWTimer.m */,
-				07FC914B138EB6BE000D5ADB /* KWVector.h */,
-				07FC914C138EB6BE000D5ADB /* KWVector.m */,
+				074CB02F13A75399006FB6EC /* KWSingleton.h */,
+				074CB03013A75399006FB6EC /* KWSingleton.m */,
+				074CB03313A75399006FB6EC /* KWTimer.h */,
+				074CB03413A7539A006FB6EC /* KWTimer.m */,
+				074CB03513A7539A006FB6EC /* KWVector.h */,
+				074CB03613A7539A006FB6EC /* KWVector.m */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -983,12 +1006,15 @@
 				07FC9137138EAEE8000D5ADB /* RootViewController.m in Sources */,
 				07FC913A138EAEE8000D5ADB /* HelloWorldLayer.m in Sources */,
 				07FC9143138EB150000D5ADB /* LogoLayer.m in Sources */,
-				07FC914D138EB6BE000D5ADB /* KWSingleton.m in Sources */,
-				07FC914E138EB6BE000D5ADB /* KWTimer.m in Sources */,
-				07FC914F138EB6BE000D5ADB /* KWVector.m in Sources */,
 				07FC9154138EBA60000D5ADB /* TitleLayer.m in Sources */,
 				07FC91C913901579000D5ADB /* MainLayer.m in Sources */,
 				07FC91CC139015FB000D5ADB /* Kawaz.m in Sources */,
+				074CB03713A7539A006FB6EC /* KWAnimation.m in Sources */,
+				074CB03813A7539A006FB6EC /* KWScene.m in Sources */,
+				074CB03913A7539A006FB6EC /* KWSingleton.m in Sources */,
+				074CB03A13A7539A006FB6EC /* KWSprite.m in Sources */,
+				074CB03B13A7539A006FB6EC /* KWTimer.m in Sources */,
+				074CB03C13A7539A006FB6EC /* KWVector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1082,6 +1108,7 @@
 				07FC9140138EAEE8000D5ADB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
