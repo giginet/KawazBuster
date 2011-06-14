@@ -1,47 +1,30 @@
 //
-//  LogoLayer.m
+//  LogoScene.m
 //  KawazBuster
 //
 //  Created by giginet on 11/05/27.
 //  Copyright 2011 Kawaz. All rights reserved.
 //
 
-#import "LogoLayer.h"
-#import "TitleLayer.h"
+#import "LogoScene.h"
+#import "TitleScene.h"
 
-@interface LogoLayer()
+@interface LogoScene()
   -(void)changeToTitle;
 @end
 
-@implementation LogoLayer
-+(CCScene *) scene
-{
-	// 'scene' is an autorelease object.
-	CCScene *scene = [CCScene node];
-	
-	// 'layer' is an autorelease object.
-	LogoLayer *layer = [LogoLayer node];
-	
-	// add layer as a child to scene
-	[scene addChild: layer];
-	
-	// return the scene
-	return scene;
-}
+@implementation LogoScene
 
 // on "init" you need to initialize your instance
 -(id) init{
-	if( (self=[super init])) {
+	backgroundColor_ = ccc4(255, 255, 255, 255);
+  if( (self=[super init])) {
     CGSize windowSize = [[CCDirector sharedDirector] winSize];
-    CCLayerColor* bg = [CCColorLayer layerWithColor:ccc4(255, 255, 255, 255) 
-                                              width:windowSize.width
-                                             height:windowSize.height];
     logo_ = [[CCSprite alloc] initWithFile:@"kawaz.png"];
     logo_.position = ccp(windowSize.width/2, windowSize.height/2);
     logo_.opacity = 0;
     timer_ = [[KWTimer alloc] initWithMax:120];
     [timer_ play];
-    [self addChild:bg];
     [self addChild:logo_];
     [self schedule:@selector(update:)];
     self.isTouchEnabled = YES;
@@ -77,7 +60,7 @@
 }
 
 - (void)changeToTitle{
-  CCScene* titleScene = [TitleLayer scene];
+  CCScene* titleScene = [TitleScene scene];
   CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:0.5f scene:titleScene];
   [[CCDirector sharedDirector] replaceScene:transition];
 }

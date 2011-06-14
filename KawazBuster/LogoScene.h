@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "kwing.h"
 
-@interface LogoLayer : KWScene {
+@interface LogoScene : KWScene {
   CCSprite* logo_;
   KWTimer* timer_;
 }

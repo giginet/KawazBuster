@@ -1,5 +1,5 @@
 //
-//  TitleLayer.h
+//  TitleScene.h
 //  KawazBuster
 //
 //  Created by giginet on 11/05/27.
@@ -7,15 +7,12 @@
 //
 
 // When you import this file, you import all the cocos2d classes
-#import "cocos2d.h"
+#import "kwing.h"
 
-// HelloWorldLayer
-@interface TitleLayer : CCLayer
-{
+@interface TitleScene : KWScene{
+  KWSprite* logo_;
 }
 
-// returns a CCScene that contains the HelloWorldLayer as the only child
-+(CCScene *) scene;
 
 @end
 

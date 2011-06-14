@@ -10,7 +10,7 @@
 
 #import "AppDelegate.h"
 #import "GameConfig.h"
-#import "LogoLayer.h"
+#import "LogoScene.h"
 #import "RootViewController.h"
 
 @implementation AppDelegate
@@ -88,7 +88,7 @@
 	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
 #endif
 	
-	[director setAnimationInterval:1.0/60];
+	[director setAnimationInterval:1.0/FPS];
 	[director setDisplayFPS:YES];
 	
 	
@@ -110,7 +110,7 @@
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [LogoLayer scene]];
+	[[CCDirector sharedDirector] runWithScene: [LogoScene scene]];
 }
 
 

@@ -13,6 +13,18 @@
 		074CB03A13A7539A006FB6EC /* KWSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB03213A75399006FB6EC /* KWSprite.m */; };
 		074CB03B13A7539A006FB6EC /* KWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB03413A7539A006FB6EC /* KWTimer.m */; };
 		074CB03C13A7539A006FB6EC /* KWVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB03613A7539A006FB6EC /* KWVector.m */; };
+		074CB04E13A757E4006FB6EC /* exit-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04413A757E4006FB6EC /* exit-hd.png */; };
+		074CB04F13A757E4006FB6EC /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04513A757E4006FB6EC /* exit.png */; };
+		074CB05013A757E4006FB6EC /* howto-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04613A757E4006FB6EC /* howto-hd.png */; };
+		074CB05113A757E4006FB6EC /* howto.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04713A757E4006FB6EC /* howto.png */; };
+		074CB05213A757E4006FB6EC /* logo-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04813A757E4006FB6EC /* logo-hd.png */; };
+		074CB05313A757E4006FB6EC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04913A757E4006FB6EC /* logo.png */; };
+		074CB05413A757E4006FB6EC /* start-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04A13A757E4006FB6EC /* start-hd.png */; };
+		074CB05513A757E4006FB6EC /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04B13A757E4006FB6EC /* start.png */; };
+		074CB05613A757E4006FB6EC /* title_background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04C13A757E4006FB6EC /* title_background-hd.png */; };
+		074CB05713A757E4006FB6EC /* title_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04D13A757E4006FB6EC /* title_background.png */; };
+		074CB05B13A759A7006FB6EC /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB05A13A759A5006FB6EC /* TitleScene.m */; };
+		074CB05E13A759E4006FB6EC /* LogoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB05D13A759E3006FB6EC /* LogoScene.m */; };
 		07FC8FD1138EAEE5000D5ADB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD0138EAEE5000D5ADB /* QuartzCore.framework */; };
 		07FC8FD3138EAEE5000D5ADB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD2138EAEE5000D5ADB /* OpenGLES.framework */; };
 		07FC8FD5138EAEE5000D5ADB /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD4138EAEE5000D5ADB /* OpenAL.framework */; };
@@ -128,9 +140,7 @@
 		07FC9134138EAEE8000D5ADB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9133138EAEE8000D5ADB /* AppDelegate.m */; };
 		07FC9137138EAEE8000D5ADB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9136138EAEE8000D5ADB /* RootViewController.m */; };
 		07FC913A138EAEE8000D5ADB /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */; };
-		07FC9143138EB150000D5ADB /* LogoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9142138EB150000D5ADB /* LogoLayer.m */; };
 		07FC9145138EB276000D5ADB /* kawaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FC9144138EB276000D5ADB /* kawaz.png */; };
-		07FC9154138EBA60000D5ADB /* TitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9153138EBA5E000D5ADB /* TitleLayer.m */; };
 		07FC91C913901579000D5ADB /* MainLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC91C813901578000D5ADB /* MainLayer.m */; };
 		07FC91CC139015FB000D5ADB /* Kawaz.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC91CB139015FA000D5ADB /* Kawaz.m */; };
 /* End PBXBuildFile section */
@@ -149,6 +159,20 @@
 		074CB03413A7539A006FB6EC /* KWTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWTimer.m; path = libs/kwing/KWTimer.m; sourceTree = "<group>"; };
 		074CB03513A7539A006FB6EC /* KWVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWVector.h; path = libs/kwing/KWVector.h; sourceTree = "<group>"; };
 		074CB03613A7539A006FB6EC /* KWVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWVector.m; path = libs/kwing/KWVector.m; sourceTree = "<group>"; };
+		074CB04413A757E4006FB6EC /* exit-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "exit-hd.png"; path = "Resources/image/title/exit-hd.png"; sourceTree = "<group>"; };
+		074CB04513A757E4006FB6EC /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exit.png; path = Resources/image/title/exit.png; sourceTree = "<group>"; };
+		074CB04613A757E4006FB6EC /* howto-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "howto-hd.png"; path = "Resources/image/title/howto-hd.png"; sourceTree = "<group>"; };
+		074CB04713A757E4006FB6EC /* howto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howto.png; path = Resources/image/title/howto.png; sourceTree = "<group>"; };
+		074CB04813A757E4006FB6EC /* logo-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-hd.png"; path = "Resources/image/title/logo-hd.png"; sourceTree = "<group>"; };
+		074CB04913A757E4006FB6EC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Resources/image/title/logo.png; sourceTree = "<group>"; };
+		074CB04A13A757E4006FB6EC /* start-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "start-hd.png"; path = "Resources/image/title/start-hd.png"; sourceTree = "<group>"; };
+		074CB04B13A757E4006FB6EC /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start.png; path = Resources/image/title/start.png; sourceTree = "<group>"; };
+		074CB04C13A757E4006FB6EC /* title_background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "title_background-hd.png"; path = "Resources/image/title/title_background-hd.png"; sourceTree = "<group>"; };
+		074CB04D13A757E4006FB6EC /* title_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title_background.png; path = Resources/image/title/title_background.png; sourceTree = "<group>"; };
+		074CB05913A759A4006FB6EC /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
+		074CB05A13A759A5006FB6EC /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
+		074CB05C13A759E1006FB6EC /* LogoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoScene.h; sourceTree = "<group>"; };
+		074CB05D13A759E3006FB6EC /* LogoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoScene.m; sourceTree = "<group>"; };
 		07FC8FCC138EAEE5000D5ADB /* KawazBuster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KawazBuster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FC8FD0138EAEE5000D5ADB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		07FC8FD2138EAEE5000D5ADB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -384,11 +408,7 @@
 		07FC9138138EAEE8000D5ADB /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		07FC913B138EAEE8000D5ADB /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
-		07FC9141138EB150000D5ADB /* LogoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogoLayer.h; path = ../LogoLayer.h; sourceTree = "<group>"; };
-		07FC9142138EB150000D5ADB /* LogoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoLayer.m; path = ../LogoLayer.m; sourceTree = "<group>"; };
 		07FC9144138EB276000D5ADB /* kawaz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawaz.png; sourceTree = "<group>"; };
-		07FC9152138EBA5D000D5ADB /* TitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLayer.h; sourceTree = "<group>"; };
-		07FC9153138EBA5E000D5ADB /* TitleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleLayer.m; sourceTree = "<group>"; };
 		07FC91C713901577000D5ADB /* MainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLayer.h; sourceTree = "<group>"; };
 		07FC91C813901578000D5ADB /* MainLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLayer.m; sourceTree = "<group>"; };
 		07FC91CA139015F9000D5ADB /* Kawaz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kawaz.h; sourceTree = "<group>"; };
@@ -423,6 +443,45 @@
 				074CB03213A75399006FB6EC /* KWSprite.m */,
 			);
 			name = sprite;
+			sourceTree = "<group>";
+		};
+		074CB03D13A75439006FB6EC /* image */ = {
+			isa = PBXGroup;
+			children = (
+				074CB05813A757E9006FB6EC /* title */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		074CB03E13A7543F006FB6EC /* music */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = music;
+			sourceTree = "<group>";
+		};
+		074CB03F13A75445006FB6EC /* se */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = se;
+			sourceTree = "<group>";
+		};
+		074CB05813A757E9006FB6EC /* title */ = {
+			isa = PBXGroup;
+			children = (
+				074CB04413A757E4006FB6EC /* exit-hd.png */,
+				074CB04513A757E4006FB6EC /* exit.png */,
+				074CB04613A757E4006FB6EC /* howto-hd.png */,
+				074CB04713A757E4006FB6EC /* howto.png */,
+				074CB04813A757E4006FB6EC /* logo-hd.png */,
+				074CB04913A757E4006FB6EC /* logo.png */,
+				074CB04A13A757E4006FB6EC /* start-hd.png */,
+				074CB04B13A757E4006FB6EC /* start.png */,
+				074CB04C13A757E4006FB6EC /* title_background-hd.png */,
+				074CB04D13A757E4006FB6EC /* title_background.png */,
+			);
+			name = title;
 			sourceTree = "<group>";
 		};
 		07FC8FC1138EAEE4000D5ADB = {
@@ -460,14 +519,14 @@
 		07FC8FE0138EAEE5000D5ADB /* KawazBuster */ = {
 			isa = PBXGroup;
 			children = (
+				074CB05C13A759E1006FB6EC /* LogoScene.h */,
+				074CB05D13A759E3006FB6EC /* LogoScene.m */,
+				074CB05913A759A4006FB6EC /* TitleScene.h */,
+				074CB05A13A759A5006FB6EC /* TitleScene.m */,
 				07FC91CA139015F9000D5ADB /* Kawaz.h */,
 				07FC91CB139015FA000D5ADB /* Kawaz.m */,
 				07FC91C713901577000D5ADB /* MainLayer.h */,
 				07FC91C813901578000D5ADB /* MainLayer.m */,
-				07FC9141138EB150000D5ADB /* LogoLayer.h */,
-				07FC9142138EB150000D5ADB /* LogoLayer.m */,
-				07FC9152138EBA5D000D5ADB /* TitleLayer.h */,
-				07FC9153138EBA5E000D5ADB /* TitleLayer.m */,
 				07FC9132138EAEE8000D5ADB /* AppDelegate.h */,
 				07FC9133138EAEE8000D5ADB /* AppDelegate.m */,
 				07FC9135138EAEE8000D5ADB /* RootViewController.h */,
@@ -485,6 +544,9 @@
 		07FC8FE1138EAEE5000D5ADB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				074CB03F13A75445006FB6EC /* se */,
+				074CB03E13A7543F006FB6EC /* music */,
+				074CB03D13A75439006FB6EC /* image */,
 				07FC9144138EB276000D5ADB /* kawaz.png */,
 				07FC8FE2138EAEE5000D5ADB /* Default.png */,
 				07FC8FE4138EAEE5000D5ADB /* fps_images.png */,
@@ -897,6 +959,16 @@
 				07FC8FF1138EAEE5000D5ADB /* Icon@2x.png in Resources */,
 				07FC8FF4138EAEE5000D5ADB /* iTunesArtwork in Resources */,
 				07FC9145138EB276000D5ADB /* kawaz.png in Resources */,
+				074CB04E13A757E4006FB6EC /* exit-hd.png in Resources */,
+				074CB04F13A757E4006FB6EC /* exit.png in Resources */,
+				074CB05013A757E4006FB6EC /* howto-hd.png in Resources */,
+				074CB05113A757E4006FB6EC /* howto.png in Resources */,
+				074CB05213A757E4006FB6EC /* logo-hd.png in Resources */,
+				074CB05313A757E4006FB6EC /* logo.png in Resources */,
+				074CB05413A757E4006FB6EC /* start-hd.png in Resources */,
+				074CB05513A757E4006FB6EC /* start.png in Resources */,
+				074CB05613A757E4006FB6EC /* title_background-hd.png in Resources */,
+				074CB05713A757E4006FB6EC /* title_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,8 +1077,6 @@
 				07FC9134138EAEE8000D5ADB /* AppDelegate.m in Sources */,
 				07FC9137138EAEE8000D5ADB /* RootViewController.m in Sources */,
 				07FC913A138EAEE8000D5ADB /* HelloWorldLayer.m in Sources */,
-				07FC9143138EB150000D5ADB /* LogoLayer.m in Sources */,
-				07FC9154138EBA60000D5ADB /* TitleLayer.m in Sources */,
 				07FC91C913901579000D5ADB /* MainLayer.m in Sources */,
 				07FC91CC139015FB000D5ADB /* Kawaz.m in Sources */,
 				074CB03713A7539A006FB6EC /* KWAnimation.m in Sources */,
@@ -1015,6 +1085,8 @@
 				074CB03A13A7539A006FB6EC /* KWSprite.m in Sources */,
 				074CB03B13A7539A006FB6EC /* KWTimer.m in Sources */,
 				074CB03C13A7539A006FB6EC /* KWVector.m in Sources */,
+				074CB05B13A759A7006FB6EC /* TitleScene.m in Sources */,
+				074CB05E13A759E4006FB6EC /* LogoScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
