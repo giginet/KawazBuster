@@ -128,6 +128,8 @@
 		07FC914E138EB6BE000D5ADB /* KWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC914A138EB6BE000D5ADB /* KWTimer.m */; };
 		07FC914F138EB6BE000D5ADB /* KWVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC914C138EB6BE000D5ADB /* KWVector.m */; };
 		07FC9154138EBA60000D5ADB /* TitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9153138EBA5E000D5ADB /* TitleLayer.m */; };
+		07FC91C913901579000D5ADB /* MainLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC91C813901578000D5ADB /* MainLayer.m */; };
+		07FC91CC139015FB000D5ADB /* Kawaz.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC91CB139015FA000D5ADB /* Kawaz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -378,6 +380,10 @@
 		07FC9151138EB765000D5ADB /* kwing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kwing.h; sourceTree = "<group>"; };
 		07FC9152138EBA5D000D5ADB /* TitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLayer.h; sourceTree = "<group>"; };
 		07FC9153138EBA5E000D5ADB /* TitleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleLayer.m; sourceTree = "<group>"; };
+		07FC91C713901577000D5ADB /* MainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLayer.h; sourceTree = "<group>"; };
+		07FC91C813901578000D5ADB /* MainLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainLayer.m; sourceTree = "<group>"; };
+		07FC91CA139015F9000D5ADB /* Kawaz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kawaz.h; sourceTree = "<group>"; };
+		07FC91CB139015FA000D5ADB /* Kawaz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kawaz.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +440,10 @@
 		07FC8FE0138EAEE5000D5ADB /* KawazBuster */ = {
 			isa = PBXGroup;
 			children = (
+				07FC91CA139015F9000D5ADB /* Kawaz.h */,
+				07FC91CB139015FA000D5ADB /* Kawaz.m */,
+				07FC91C713901577000D5ADB /* MainLayer.h */,
+				07FC91C813901578000D5ADB /* MainLayer.m */,
 				07FC9141138EB150000D5ADB /* LogoLayer.h */,
 				07FC9142138EB150000D5ADB /* LogoLayer.m */,
 				07FC9152138EBA5D000D5ADB /* TitleLayer.h */,
@@ -977,6 +987,8 @@
 				07FC914E138EB6BE000D5ADB /* KWTimer.m in Sources */,
 				07FC914F138EB6BE000D5ADB /* KWVector.m in Sources */,
 				07FC9154138EBA60000D5ADB /* TitleLayer.m in Sources */,
+				07FC91C913901579000D5ADB /* MainLayer.m in Sources */,
+				07FC91CC139015FB000D5ADB /* Kawaz.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
