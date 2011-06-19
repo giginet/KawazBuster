@@ -8,6 +8,7 @@
 
 #import "TitleScene.h"
 #import "MainScene.h"
+#import "SimpleAudioEngine.h"
 
 /*
  無名カテゴリ
@@ -26,11 +27,9 @@
 
 -(id)init{
 	if( (self=[super init])) {
-		// 画面サイズを取得する
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    // 背景の定義
+		// 背景の定義
     KWSprite* background = [KWSprite spriteWithFile:@"title_background.png"];
-    background.position = ccp(winSize.width/2, winSize.height/2);
+    background.position = ccp(winSize_.width/2, winSize_.height/2);
     // ロゴの定義
     /* 
      spriteWithFileで生成すると、このメソッドから抜けたとき、自動的にautoreleaseされてしまう
@@ -38,7 +37,7 @@
      logo_移動させる関係上、他のメソッドでも参照するため、メンバ変数でもたせている
     */
     logo_ = [[KWSprite alloc] initWithFile:@"logo.png"];
-    logo_.position = ccp(winSize.width/2, 260);
+    logo_.position = ccp(winSize_.width/2, 260);
     // メニューの定義
     CCMenuItemImage* start = [CCMenuItemImage itemFromNormalImage:@"start.png" // 通常時の画像 
                                                     selectedImage:@"start.png" // 押したときの画像
@@ -54,11 +53,14 @@
                                                          selector:@selector(pressHowtoButton:)];
     CCMenu* menu = [CCMenu menuWithItems:howto, start, exit, nil]; // 生成した各MenuItemからメニューを作る
     [menu alignItemsHorizontally]; // メニューを横並びにする
-    menu.position = ccp(winSize.width/2, 40); // メニューの中心位置を設定
+    menu.position = ccp(winSize_.width/2, 40); // メニューの中心位置を設定
     // レイヤーに追加
     [self addChild:background];
     [self addChild:logo_];
     [self addChild:menu];
+    // タイトル音楽の再生
+    SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
+    [ae playBackgroundMusic:@"title.wav" loop:NO];
   }
 	return self;
 }
@@ -67,6 +69,8 @@
   CCScene* mainScene = [MainScene scene];
   CCTransitionFade* transition = [CCTransitionZoomFlipAngular transitionWithDuration:0.5f scene:mainScene];
   [[CCDirector sharedDirector] replaceScene:transition];
+  SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
+  [ae stopBackgroundMusic];
 }
 
 - (void)pressExitButton:(id)sender{

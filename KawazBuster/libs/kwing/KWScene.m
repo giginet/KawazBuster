@@ -13,10 +13,10 @@
 
 - (id)init{
   if( (self = [super init]) ){
-    CGSize windowSize = [[CCDirector sharedDirector] winSize];
+    winSize_ = [[CCDirector sharedDirector] winSize];
     CCLayerColor* bg = [CCColorLayer layerWithColor:backgroundColor_
-                                              width:windowSize.width
-                                             height:windowSize.height];
+                                              width:winSize_.width
+                                             height:winSize_.height];
     [self addChild:bg];
     [self schedule:@selector(update:)];
   }

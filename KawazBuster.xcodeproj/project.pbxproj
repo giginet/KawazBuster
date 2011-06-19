@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0739340E13A8AEBB00CAC438 /* KawazTan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0739340D13A8AEBA00CAC438 /* KawazTan.m */; };
 		074CB03713A7539A006FB6EC /* KWAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB02C13A75399006FB6EC /* KWAnimation.m */; };
 		074CB03813A7539A006FB6EC /* KWScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB02E13A75399006FB6EC /* KWScene.m */; };
 		074CB03913A7539A006FB6EC /* KWSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB03013A75399006FB6EC /* KWSingleton.m */; };
@@ -26,6 +27,31 @@
 		074CB05B13A759A7006FB6EC /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB05A13A759A5006FB6EC /* TitleScene.m */; };
 		074CB05E13A759E4006FB6EC /* LogoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB05D13A759E3006FB6EC /* LogoScene.m */; };
 		076A4E3E13A770AE00C04B06 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A4E3D13A770AE00C04B06 /* MainScene.m */; };
+		076A4E4513A7775F00C04B06 /* main_background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E3F13A7775C00C04B06 /* main_background-hd.png */; };
+		076A4E4613A7775F00C04B06 /* main_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E4013A7775D00C04B06 /* main_background.png */; };
+		076A4E4713A7775F00C04B06 /* main_layer0-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E4113A7775D00C04B06 /* main_layer0-hd.png */; };
+		076A4E4813A7775F00C04B06 /* main_layer0.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E4213A7775E00C04B06 /* main_layer0.png */; };
+		076A4E4913A7775F00C04B06 /* main_layer1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E4313A7775E00C04B06 /* main_layer1-hd.png */; };
+		076A4E4A13A7775F00C04B06 /* main_layer1.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E4413A7775F00C04B06 /* main_layer1.png */; };
+		076A4E6113A77D0000C04B06 /* bomb_effect-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E5513A77D0000C04B06 /* bomb_effect-hd.png */; };
+		076A4E6213A77D0000C04B06 /* bomb_effect.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E5613A77D0000C04B06 /* bomb_effect.png */; };
+		076A4E6313A77D0000C04B06 /* bomb-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E5713A77D0000C04B06 /* bomb-hd.png */; };
+		076A4E6413A77D0000C04B06 /* bomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E5813A77D0000C04B06 /* bomb.png */; };
+		076A4E6513A77D0000C04B06 /* damage-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E5913A77D0000C04B06 /* damage-hd.png */; };
+		076A4E6613A77D0000C04B06 /* damage.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E5A13A77D0000C04B06 /* damage.png */; };
+		076A4E6713A77D0000C04B06 /* kawaz0-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E5B13A77D0000C04B06 /* kawaz0-hd.png */; };
+		076A4E6813A77D0000C04B06 /* kawaz0.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E5C13A77D0000C04B06 /* kawaz0.png */; };
+		076A4E6913A77D0000C04B06 /* kawaz1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E5D13A77D0000C04B06 /* kawaz1-hd.png */; };
+		076A4E6A13A77D0000C04B06 /* kawaz1.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E5E13A77D0000C04B06 /* kawaz1.png */; };
+		076A4E6B13A77D0000C04B06 /* kawaz2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E5F13A77D0000C04B06 /* kawaz2-hd.png */; };
+		076A4E6C13A77D0000C04B06 /* kawaz2.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E6013A77D0000C04B06 /* kawaz2.png */; };
+		076A4E7B13A7854700C04B06 /* bgm_int_tempo_up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E7413A7854700C04B06 /* bgm_int_tempo_up.wav */; };
+		076A4E7C13A7854700C04B06 /* bgm_int.wav in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E7513A7854700C04B06 /* bgm_int.wav */; };
+		076A4E7D13A7854700C04B06 /* bgm_tempo_up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E7613A7854700C04B06 /* bgm_tempo_up.wav */; };
+		076A4E7E13A7854700C04B06 /* bgm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E7713A7854700C04B06 /* bgm.wav */; };
+		076A4E7F13A7854700C04B06 /* game_over.wav in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E7813A7854700C04B06 /* game_over.wav */; };
+		076A4E8013A7854700C04B06 /* high_score.wav in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E7913A7854700C04B06 /* high_score.wav */; };
+		076A4E8113A7854700C04B06 /* title.wav in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E7A13A7854700C04B06 /* title.wav */; };
 		07FC8FD1138EAEE5000D5ADB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD0138EAEE5000D5ADB /* QuartzCore.framework */; };
 		07FC8FD3138EAEE5000D5ADB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD2138EAEE5000D5ADB /* OpenGLES.framework */; };
 		07FC8FD5138EAEE5000D5ADB /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD4138EAEE5000D5ADB /* OpenAL.framework */; };
@@ -142,10 +168,11 @@
 		07FC9137138EAEE8000D5ADB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9136138EAEE8000D5ADB /* RootViewController.m */; };
 		07FC913A138EAEE8000D5ADB /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */; };
 		07FC9145138EB276000D5ADB /* kawaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FC9144138EB276000D5ADB /* kawaz.png */; };
-		07FC91CC139015FB000D5ADB /* Kawaz.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC91CB139015FA000D5ADB /* Kawaz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0739340C13A8AEBA00CAC438 /* KawazTan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KawazTan.h; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/KawazTan.h; sourceTree = "<group>"; };
+		0739340D13A8AEBA00CAC438 /* KawazTan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KawazTan.m; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/KawazTan.m; sourceTree = "<group>"; };
 		074CB02A13A75380006FB6EC /* kwing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kwing.h; path = libs/kwing/kwing.h; sourceTree = "<group>"; };
 		074CB02B13A75399006FB6EC /* KWAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWAnimation.h; path = libs/kwing/KWAnimation.h; sourceTree = "<group>"; };
 		074CB02C13A75399006FB6EC /* KWAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWAnimation.m; path = libs/kwing/KWAnimation.m; sourceTree = "<group>"; };
@@ -175,6 +202,31 @@
 		074CB05D13A759E3006FB6EC /* LogoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoScene.m; sourceTree = "<group>"; };
 		076A4E3C13A770AD00C04B06 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
 		076A4E3D13A770AE00C04B06 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
+		076A4E3F13A7775C00C04B06 /* main_background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "main_background-hd.png"; path = "Resources/image/main/main_background-hd.png"; sourceTree = "<group>"; };
+		076A4E4013A7775D00C04B06 /* main_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = main_background.png; path = Resources/image/main/main_background.png; sourceTree = "<group>"; };
+		076A4E4113A7775D00C04B06 /* main_layer0-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "main_layer0-hd.png"; path = "Resources/image/main/main_layer0-hd.png"; sourceTree = "<group>"; };
+		076A4E4213A7775E00C04B06 /* main_layer0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = main_layer0.png; path = Resources/image/main/main_layer0.png; sourceTree = "<group>"; };
+		076A4E4313A7775E00C04B06 /* main_layer1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "main_layer1-hd.png"; path = "Resources/image/main/main_layer1-hd.png"; sourceTree = "<group>"; };
+		076A4E4413A7775F00C04B06 /* main_layer1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = main_layer1.png; path = Resources/image/main/main_layer1.png; sourceTree = "<group>"; };
+		076A4E5513A77D0000C04B06 /* bomb_effect-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bomb_effect-hd.png"; path = "Resources/image/main/bomb_effect-hd.png"; sourceTree = "<group>"; };
+		076A4E5613A77D0000C04B06 /* bomb_effect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bomb_effect.png; path = Resources/image/main/bomb_effect.png; sourceTree = "<group>"; };
+		076A4E5713A77D0000C04B06 /* bomb-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bomb-hd.png"; path = "Resources/image/main/bomb-hd.png"; sourceTree = "<group>"; };
+		076A4E5813A77D0000C04B06 /* bomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bomb.png; path = Resources/image/main/bomb.png; sourceTree = "<group>"; };
+		076A4E5913A77D0000C04B06 /* damage-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "damage-hd.png"; path = "Resources/image/main/damage-hd.png"; sourceTree = "<group>"; };
+		076A4E5A13A77D0000C04B06 /* damage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = damage.png; path = Resources/image/main/damage.png; sourceTree = "<group>"; };
+		076A4E5B13A77D0000C04B06 /* kawaz0-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "kawaz0-hd.png"; path = "Resources/image/main/kawaz0-hd.png"; sourceTree = "<group>"; };
+		076A4E5C13A77D0000C04B06 /* kawaz0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kawaz0.png; path = Resources/image/main/kawaz0.png; sourceTree = "<group>"; };
+		076A4E5D13A77D0000C04B06 /* kawaz1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "kawaz1-hd.png"; path = "Resources/image/main/kawaz1-hd.png"; sourceTree = "<group>"; };
+		076A4E5E13A77D0000C04B06 /* kawaz1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kawaz1.png; path = Resources/image/main/kawaz1.png; sourceTree = "<group>"; };
+		076A4E5F13A77D0000C04B06 /* kawaz2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "kawaz2-hd.png"; path = "Resources/image/main/kawaz2-hd.png"; sourceTree = "<group>"; };
+		076A4E6013A77D0000C04B06 /* kawaz2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kawaz2.png; path = Resources/image/main/kawaz2.png; sourceTree = "<group>"; };
+		076A4E7413A7854700C04B06 /* bgm_int_tempo_up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bgm_int_tempo_up.wav; path = Resources/music/bgm_int_tempo_up.wav; sourceTree = "<group>"; };
+		076A4E7513A7854700C04B06 /* bgm_int.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bgm_int.wav; path = Resources/music/bgm_int.wav; sourceTree = "<group>"; };
+		076A4E7613A7854700C04B06 /* bgm_tempo_up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bgm_tempo_up.wav; path = Resources/music/bgm_tempo_up.wav; sourceTree = "<group>"; };
+		076A4E7713A7854700C04B06 /* bgm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bgm.wav; path = Resources/music/bgm.wav; sourceTree = "<group>"; };
+		076A4E7813A7854700C04B06 /* game_over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = game_over.wav; path = Resources/music/game_over.wav; sourceTree = "<group>"; };
+		076A4E7913A7854700C04B06 /* high_score.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = high_score.wav; path = Resources/music/high_score.wav; sourceTree = "<group>"; };
+		076A4E7A13A7854700C04B06 /* title.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = title.wav; path = Resources/music/title.wav; sourceTree = "<group>"; };
 		07FC8FCC138EAEE5000D5ADB /* KawazBuster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KawazBuster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FC8FD0138EAEE5000D5ADB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		07FC8FD2138EAEE5000D5ADB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -411,8 +463,6 @@
 		07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		07FC913B138EAEE8000D5ADB /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		07FC9144138EB276000D5ADB /* kawaz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawaz.png; sourceTree = "<group>"; };
-		07FC91CA139015F9000D5ADB /* Kawaz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kawaz.h; sourceTree = "<group>"; };
-		07FC91CB139015FA000D5ADB /* Kawaz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kawaz.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +498,7 @@
 		074CB03D13A75439006FB6EC /* image */ = {
 			isa = PBXGroup;
 			children = (
+				076A4E4B13A7776700C04B06 /* main */,
 				074CB05813A757E9006FB6EC /* title */,
 			);
 			name = image;
@@ -456,6 +507,13 @@
 		074CB03E13A7543F006FB6EC /* music */ = {
 			isa = PBXGroup;
 			children = (
+				076A4E7413A7854700C04B06 /* bgm_int_tempo_up.wav */,
+				076A4E7513A7854700C04B06 /* bgm_int.wav */,
+				076A4E7613A7854700C04B06 /* bgm_tempo_up.wav */,
+				076A4E7713A7854700C04B06 /* bgm.wav */,
+				076A4E7813A7854700C04B06 /* game_over.wav */,
+				076A4E7913A7854700C04B06 /* high_score.wav */,
+				076A4E7A13A7854700C04B06 /* title.wav */,
 			);
 			name = music;
 			sourceTree = "<group>";
@@ -482,6 +540,47 @@
 				074CB04D13A757E4006FB6EC /* title_background.png */,
 			);
 			name = title;
+			sourceTree = "<group>";
+		};
+		076A4E4B13A7776700C04B06 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				076A4E6D13A77D0600C04B06 /* kawaz */,
+				076A4E4C13A7777400C04B06 /* background */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		076A4E4C13A7777400C04B06 /* background */ = {
+			isa = PBXGroup;
+			children = (
+				076A4E3F13A7775C00C04B06 /* main_background-hd.png */,
+				076A4E4013A7775D00C04B06 /* main_background.png */,
+				076A4E4113A7775D00C04B06 /* main_layer0-hd.png */,
+				076A4E4213A7775E00C04B06 /* main_layer0.png */,
+				076A4E4313A7775E00C04B06 /* main_layer1-hd.png */,
+				076A4E4413A7775F00C04B06 /* main_layer1.png */,
+			);
+			name = background;
+			sourceTree = "<group>";
+		};
+		076A4E6D13A77D0600C04B06 /* kawaz */ = {
+			isa = PBXGroup;
+			children = (
+				076A4E5513A77D0000C04B06 /* bomb_effect-hd.png */,
+				076A4E5613A77D0000C04B06 /* bomb_effect.png */,
+				076A4E5713A77D0000C04B06 /* bomb-hd.png */,
+				076A4E5813A77D0000C04B06 /* bomb.png */,
+				076A4E5913A77D0000C04B06 /* damage-hd.png */,
+				076A4E5A13A77D0000C04B06 /* damage.png */,
+				076A4E5B13A77D0000C04B06 /* kawaz0-hd.png */,
+				076A4E5C13A77D0000C04B06 /* kawaz0.png */,
+				076A4E5D13A77D0000C04B06 /* kawaz1-hd.png */,
+				076A4E5E13A77D0000C04B06 /* kawaz1.png */,
+				076A4E5F13A77D0000C04B06 /* kawaz2-hd.png */,
+				076A4E6013A77D0000C04B06 /* kawaz2.png */,
+			);
+			name = kawaz;
 			sourceTree = "<group>";
 		};
 		07FC8FC1138EAEE4000D5ADB = {
@@ -519,14 +618,14 @@
 		07FC8FE0138EAEE5000D5ADB /* KawazBuster */ = {
 			isa = PBXGroup;
 			children = (
+				0739340C13A8AEBA00CAC438 /* KawazTan.h */,
+				0739340D13A8AEBA00CAC438 /* KawazTan.m */,
 				076A4E3C13A770AD00C04B06 /* MainScene.h */,
 				076A4E3D13A770AE00C04B06 /* MainScene.m */,
 				074CB05C13A759E1006FB6EC /* LogoScene.h */,
 				074CB05D13A759E3006FB6EC /* LogoScene.m */,
 				074CB05913A759A4006FB6EC /* TitleScene.h */,
 				074CB05A13A759A5006FB6EC /* TitleScene.m */,
-				07FC91CA139015F9000D5ADB /* Kawaz.h */,
-				07FC91CB139015FA000D5ADB /* Kawaz.m */,
 				07FC9132138EAEE8000D5ADB /* AppDelegate.h */,
 				07FC9133138EAEE8000D5ADB /* AppDelegate.m */,
 				07FC9135138EAEE8000D5ADB /* RootViewController.h */,
@@ -970,6 +1069,31 @@
 				074CB05513A757E4006FB6EC /* start.png in Resources */,
 				074CB05613A757E4006FB6EC /* title_background-hd.png in Resources */,
 				074CB05713A757E4006FB6EC /* title_background.png in Resources */,
+				076A4E4513A7775F00C04B06 /* main_background-hd.png in Resources */,
+				076A4E4613A7775F00C04B06 /* main_background.png in Resources */,
+				076A4E4713A7775F00C04B06 /* main_layer0-hd.png in Resources */,
+				076A4E4813A7775F00C04B06 /* main_layer0.png in Resources */,
+				076A4E4913A7775F00C04B06 /* main_layer1-hd.png in Resources */,
+				076A4E4A13A7775F00C04B06 /* main_layer1.png in Resources */,
+				076A4E6113A77D0000C04B06 /* bomb_effect-hd.png in Resources */,
+				076A4E6213A77D0000C04B06 /* bomb_effect.png in Resources */,
+				076A4E6313A77D0000C04B06 /* bomb-hd.png in Resources */,
+				076A4E6413A77D0000C04B06 /* bomb.png in Resources */,
+				076A4E6513A77D0000C04B06 /* damage-hd.png in Resources */,
+				076A4E6613A77D0000C04B06 /* damage.png in Resources */,
+				076A4E6713A77D0000C04B06 /* kawaz0-hd.png in Resources */,
+				076A4E6813A77D0000C04B06 /* kawaz0.png in Resources */,
+				076A4E6913A77D0000C04B06 /* kawaz1-hd.png in Resources */,
+				076A4E6A13A77D0000C04B06 /* kawaz1.png in Resources */,
+				076A4E6B13A77D0000C04B06 /* kawaz2-hd.png in Resources */,
+				076A4E6C13A77D0000C04B06 /* kawaz2.png in Resources */,
+				076A4E7B13A7854700C04B06 /* bgm_int_tempo_up.wav in Resources */,
+				076A4E7C13A7854700C04B06 /* bgm_int.wav in Resources */,
+				076A4E7D13A7854700C04B06 /* bgm_tempo_up.wav in Resources */,
+				076A4E7E13A7854700C04B06 /* bgm.wav in Resources */,
+				076A4E7F13A7854700C04B06 /* game_over.wav in Resources */,
+				076A4E8013A7854700C04B06 /* high_score.wav in Resources */,
+				076A4E8113A7854700C04B06 /* title.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1078,7 +1202,6 @@
 				07FC9134138EAEE8000D5ADB /* AppDelegate.m in Sources */,
 				07FC9137138EAEE8000D5ADB /* RootViewController.m in Sources */,
 				07FC913A138EAEE8000D5ADB /* HelloWorldLayer.m in Sources */,
-				07FC91CC139015FB000D5ADB /* Kawaz.m in Sources */,
 				074CB03713A7539A006FB6EC /* KWAnimation.m in Sources */,
 				074CB03813A7539A006FB6EC /* KWScene.m in Sources */,
 				074CB03913A7539A006FB6EC /* KWSingleton.m in Sources */,
@@ -1088,6 +1211,7 @@
 				074CB05B13A759A7006FB6EC /* TitleScene.m in Sources */,
 				074CB05E13A759E4006FB6EC /* LogoScene.m in Sources */,
 				076A4E3E13A770AE00C04B06 /* MainScene.m in Sources */,
+				0739340E13A8AEBB00CAC438 /* KawazTan.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "LogoScene.h"
 #import "TitleScene.h"
+#import "SimpleAudioEngine.h"
 
 @interface LogoScene()
   -(void)changeToTitle;
@@ -19,15 +20,16 @@
 -(id) init{
 	backgroundColor_ = ccc4(255, 255, 255, 255);
   if( (self=[super init])) {
-    CGSize windowSize = [[CCDirector sharedDirector] winSize];
     logo_ = [[CCSprite alloc] initWithFile:@"kawaz.png"];
-    logo_.position = ccp(windowSize.width/2, windowSize.height/2);
+    logo_.position = ccp(winSize_.width/2, winSize_.height/2);
     logo_.opacity = 0;
     timer_ = [[KWTimer alloc] initWithMax:120];
     [timer_ play];
     [self addChild:logo_];
     [self schedule:@selector(update:)];
     self.isTouchEnabled = YES;
+    SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
+    [ae preloadBackgroundMusic:@"title.wav"];
   }
 	return self;
 }

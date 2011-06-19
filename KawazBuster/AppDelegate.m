@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "GameConfig.h"
 #import "LogoScene.h"
+#import "MainScene.h"
 #import "RootViewController.h"
 
 @implementation AppDelegate
@@ -38,8 +39,7 @@
 	
 #endif // GAME_AUTOROTATION == kGameAutorotationUIViewController	
 }
-- (void) applicationDidFinishLaunching:(UIApplication*)application
-{
+- (void) applicationDidFinishLaunching:(UIApplication*)application{
 	// Init the window
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
@@ -69,12 +69,12 @@
 	// attach the openglView to the director
 	[director setOpenGLView:glView];
 	
-//	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-/* 
- ここのコメントアウトを外してやると、Retinaディスプレイに対応になる
- その場合、'-hd'のsuffixを付けた、解像度2倍の画像を用意してやる必要がある
- ref:http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide%3ahow_to_develop_retinadisplay_games_in_cocos2d
- */
+  //	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
+  /* 
+   ここのコメントアウトを外してやると、Retinaディスプレイに対応になる
+   その場合、'-hd'のsuffixを付けた、解像度2倍の画像を用意してやる必要がある
+   ref:http://www.cocos2d-iphone.org/wiki/doku.php/prog_guide%3ahow_to_develop_retinadisplay_games_in_cocos2d
+   */
 	if( ! [director enableRetinaDisplay:YES] )
 		CCLOG(@"Retina Display Not supported");
 	
@@ -96,6 +96,8 @@
 	[director setAnimationInterval:1.0/FPS];
 	[director setDisplayFPS:YES];
 	
+  // initialize rand
+  srand(time(NULL));
 	
 	// make the OpenGLView a child of the view controller
 	[viewController setView:glView];
@@ -115,9 +117,12 @@
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [LogoScene scene]];
+  if(SKIPTITLE){
+    [[CCDirector sharedDirector] runWithScene: [MainScene scene]];
+  }else{
+    [[CCDirector sharedDirector] runWithScene: [LogoScene scene]];
+  }
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 	[[CCDirector sharedDirector] pause];

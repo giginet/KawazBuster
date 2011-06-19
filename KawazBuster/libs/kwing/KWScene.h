@@ -11,6 +11,7 @@
 
 @interface KWScene : CCLayer {
   ccColor4B backgroundColor_;
+  CGSize winSize_;
 }
 
 // returns a CCScene that contains this layer as the only child

@@ -9,6 +9,7 @@
 #import "kwing.h"
 
 @interface MainScene : KWScene {
+  NSArray* targets_;
 }
 
 @end
