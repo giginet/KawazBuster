@@ -11,6 +11,7 @@
 
 @implementation KWSprite
 @synthesize hitArea=hitArea_;
+@synthesize isTouchEnabled=isTouchEnabled_;
 
 - (id)init{
   if((self = [super init])){
@@ -36,7 +37,7 @@
   if(rotation_ == 0){
     return CGRectContainsRect(self.absoluteHitArea, sprite.hitArea);
   }else{
-    // 回転している矩形の判定。めんどくせー
+    // have not implemented.
     return YES;
   }  
 }
@@ -80,6 +81,26 @@
 
 - (void)setY:(double)y{
   position_.y = y;
+}
+
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+  return NO;
+}
+
+- (void)onEnter{
+  if(isTouchEnabled_){
+    [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self 
+                                                     priority:65535-self.zOrder 
+                                              swallowsTouches:YES];
+  }
+  [super onEnter];
+}
+
+- (void)onExit{
+  if(isTouchEnabled_){
+    [[CCTouchDispatcher sharedDispatcher] removeDelegate:self];
+  }
+  [super onExit];
 }
 
 @end
