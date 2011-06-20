@@ -30,7 +30,7 @@
     [self addChild:bg2 z:2000];
     // かわずたんの設置
     NSMutableArray* targets = [NSMutableArray array];
-    for(int i=0;i<9;++i){
+    for(int i=0;i<6;++i){
       KawazTan* kawaztan = [[KawazTan alloc] initWithPosition:CGPointMake(25+50*i, 10)];
       [targets addObject:kawaztan];
       [self addChild:kawaztan z:1001+i];

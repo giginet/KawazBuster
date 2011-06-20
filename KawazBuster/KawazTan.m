@@ -10,11 +10,13 @@
 
 @interface KawazTan()
 - (BOOL)tap;
-- (void)changeType;
+- (void)onBacked;
+- (void)toNormal;
+- (void)toMoving;
 @end
 
 @implementation KawazTan
-@synthesize score=score_;
+@synthesize score=score_, state=state_;
 
 - (id)initWithTexture:(CCTexture2D *)texture rect:(CGRect)rect{
   self = [super initWithTexture:texture rect:rect];
@@ -30,7 +32,7 @@
   self = [super initWithFile:filename];
   if(self){
     self.position = ccp(point.x, point.y);
-    self.isTouchEnabled = YES;
+    state_ = KawazTanStateWaiting;
   }
   return self;
 }
@@ -43,7 +45,6 @@
                                                         rect:CGRectMake(0, 0, 
                                                                         damageTexture.contentSize.width, 
                                                                         damageTexture.contentSize.height)];
-    
     [self setDisplayFrame:damaged];
     return YES;
   }
@@ -52,17 +53,19 @@
 
 - (BOOL)start{
   if(![self isMoving]){
-    state_ = KawazTanStateNormal;
+    state_ = KawazTanStateMoving;
     CGPoint point = self.position;
     CCFiniteTimeAction* go = [CCEaseOut actionWithAction:[CCMoveTo actionWithDuration:0.5f 
                                                                              position:ccp(point.x, point.y + contentSize_.height*0.8)] 
                                                     rate:0.5];
+    CCFiniteTimeAction* normal = [CCCallFunc actionWithTarget:self selector:@selector(toNormal)];
     CCFiniteTimeAction* wait = [CCMoveBy actionWithDuration:1.0f position:CGPointMake(0, 0)];
+    CCFiniteTimeAction* move = [CCCallFunc actionWithTarget:self selector:@selector(toMoving)];
     CCFiniteTimeAction* back = [CCEaseIn actionWithAction:[CCMoveTo actionWithDuration:0.5f 
                                                                               position:ccp(point.x, point.y)] 
                                                      rate:0.5];
-    CCFiniteTimeAction* change = [CCCallFunc actionWithTarget:self selector:@selector(changeType)];
-    CCSequence* seq = [CCSequence actions:go, wait, back, change, nil];
+    CCFiniteTimeAction* change = [CCCallFunc actionWithTarget:self selector:@selector(onBacked)];
+    CCSequence* seq = [CCSequence actions:go, normal, wait, move, back, change, nil];
     [self runAction:seq];
     return YES;
   }
@@ -70,15 +73,15 @@
 }
 
 - (BOOL)isMoving{
-  return [self numberOfRunningActions];
+  return [self numberOfRunningActions] != 0;
 }
 
 - (void)draw{
   [super draw];
 }
 
-- (void)changeType{
-  state_ = KawazTanStateNormal;
+- (void)onBacked{
+  state_ = KawazTanStateWaiting;
   type_ = rand()%3;
   NSString* filename = [NSString stringWithFormat:@"kawaz%d.png", type_];
   CCTexture2D* texture = [[CCTextureCache sharedTextureCache] addImage:filename];
@@ -89,13 +92,33 @@
   [self setDisplayFrame:sprite];
 }
 
+- (void)toNormal{
+  state_ = KawazTanStateNormal;
+}
+
+- (void)toMoving{
+  state_ = KawazTanStateMoving;
+}
+
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
   CGPoint point = [self convertToWorldSpace:[self convertTouchToNodeSpace:touch]];
-  if([self collideWithPoint:point]){
+  if([self collideWithPoint:point] && state_ == KawazTanStateNormal){
     [self tap];
     return YES;
   }
   return NO;
+}
+
+- (void)onEnter{
+  [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self 
+                                                   priority:2000-self.zOrder 
+                                            swallowsTouches:YES];
+  [super onEnter];
+}
+
+- (void)onExit{
+  [[CCTouchDispatcher sharedDispatcher] removeDelegate:self];
+  [super onExit];
 }
 
 @end

@@ -10,10 +10,9 @@
 #import "cocos2d.h"
 #import "CCTouchDelegateProtocol.h"
 
-@interface KWSprite : CCSprite <CCTargetedTouchDelegate> {
-  // relative hitarea from 'positions_'.
+@interface KWSprite : CCSprite {
+  // relative hitarea from 'anchor point'.
   CGRect hitArea_;
-  BOOL isTouchEnabled;
 }
 
 - (BOOL)collideWithPoint:(CGPoint)point;
@@ -27,5 +26,4 @@
 @property(readonly) CGPoint center;
 @property(readwrite) double x;
 @property(readwrite) double y;
-@property(readwrite) BOOL isTouchEnabled;
 @end

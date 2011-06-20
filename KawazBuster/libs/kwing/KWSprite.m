@@ -11,10 +11,14 @@
 
 @implementation KWSprite
 @synthesize hitArea=hitArea_;
-@synthesize isTouchEnabled=isTouchEnabled_;
 
-- (id)init{
-  if((self = [super init])){
+- (id)initWithTexture:(CCTexture2D *)texture rect:(CGRect)rect{
+  self = [super initWithTexture:texture rect:rect];
+  if(self){
+    hitArea_ = CGRectMake(0, 
+                          0, 
+                          self.contentSize.width, 
+                          self.contentSize.height);
   }
   return self;
 }
@@ -35,7 +39,7 @@
 
 - (BOOL)collideWithSprite:(KWSprite*)sprite{
   if(rotation_ == 0){
-    return CGRectContainsRect(self.absoluteHitArea, sprite.hitArea);
+    return CGRectContainsRect(self.absoluteHitArea, sprite.absoluteHitArea);
   }else{
     // have not implemented.
     return YES;
@@ -54,17 +58,15 @@
 }
 
 - (CGRect)absoluteHitArea{
-  CGPoint origin = [self convertToWorldSpace:hitArea_.origin];
-  return CGRectMake(origin.x, origin.y, hitArea_.size.width, hitArea_.size.height);
+  CGPoint origin = [self convertToWorldSpaceAR:hitArea_.origin];
+  return CGRectMake(origin.x - hitArea_.size.width/2, 
+                    origin.y - hitArea_.size.height/2, 
+                    hitArea_.size.width, 
+                    hitArea_.size.height);
 }
 
 - (CGPoint)center{
   return CGPointMake(position_.x + contentSize_.width/2, position_.y + contentSize_.height/2);
-}
-
-- (void)setTextureRectInPixels:(CGRect)rect rotated:(BOOL)rotated untrimmedSize:(CGSize)size{
-  [super setTextureRectInPixels:rect rotated:rotated untrimmedSize:size];
-  hitArea_ = CGRectMake(self.x, self.y, contentSize_.width, contentSize_.height);
 }
 
 - (double)x{
@@ -81,26 +83,6 @@
 
 - (void)setY:(double)y{
   position_.y = y;
-}
-
-- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-  return NO;
-}
-
-- (void)onEnter{
-  if(isTouchEnabled_){
-    [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self 
-                                                     priority:65535-self.zOrder 
-                                              swallowsTouches:YES];
-  }
-  [super onEnter];
-}
-
-- (void)onExit{
-  if(isTouchEnabled_){
-    [[CCTouchDispatcher sharedDispatcher] removeDelegate:self];
-  }
-  [super onExit];
 }
 
 @end

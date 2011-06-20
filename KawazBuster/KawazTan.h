@@ -11,12 +11,14 @@
 
 typedef enum{
   KawazTanStateNormal,
+  KawazTanStateWaiting,
+  KawazTanStateMoving,
   KawazTanStateDamaged,
   KawazTanStateInvinsible,
   KawazTanStateDisable
 } KawazTanState;
 
-@interface KawazTan : KWSprite{
+@interface KawazTan : KWSprite <CCTargetedTouchDelegate>{
  @private
   int type_;
   KawazTanState state_;
@@ -28,4 +30,5 @@ typedef enum{
 - (BOOL)isMoving;
 
 @property(readonly) int score;
+@property(readonly) KawazTanState state;
 @end
