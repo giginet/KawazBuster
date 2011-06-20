@@ -29,7 +29,7 @@
     [self schedule:@selector(update:)];
     self.isTouchEnabled = YES;
     SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
-    [ae preloadBackgroundMusic:@"title.wav"];
+    [ae preloadBackgroundMusic:@"title.caf"];
   }
 	return self;
 }

@@ -21,6 +21,9 @@
 #define FPS 60
 #define SKIPTITLE YES
 
+/* Kawaz-tan tataki! Local Settings */
+#define BOMB_RATE 0.2
+
 //
 // Define here the type of autorotation that you want for your game
 //

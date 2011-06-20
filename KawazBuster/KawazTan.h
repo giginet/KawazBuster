@@ -18,9 +18,16 @@ typedef enum{
   KawazTanStateDisable
 } KawazTanState;
 
+typedef enum{
+  KawazTanTypeNormal,
+  KawazTanTypeSmile,
+  KAwazTanTypeDeride,
+  KawazTanTypeBomb
+} KawazTanType;
+
 @interface KawazTan : KWSprite <CCTargetedTouchDelegate>{
  @private
-  int type_;
+  KawazTanType type_;
   KawazTanState state_;
   int score_;
 }

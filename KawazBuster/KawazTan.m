@@ -7,6 +7,8 @@
 //
 
 #import "KawazTan.h"
+#import "GameConfig.h"
+#import "SimpleAudioEngine.h"
 
 @interface KawazTan()
 - (BOOL)tap;
@@ -40,7 +42,15 @@
 - (BOOL)tap{
   if(state_ == KawazTanStateNormal){
     state_ = KawazTanStateDamaged;
-    CCTexture2D* damageTexture = [[CCTextureCache sharedTextureCache] addImage:@"damage.png"];
+    CCTexture2D* damageTexture;
+    SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
+    if(type_ == KawazTanTypeBomb){
+      damageTexture = [[CCTextureCache sharedTextureCache] addImage:@"bomb_effect.png"];
+      [ae playEffect:@"bomb.caf"];
+    }else{
+      damageTexture = [[CCTextureCache sharedTextureCache] addImage:@"damage.png"];
+      [ae playEffect:@"pico.caf"];
+    }
     CCSpriteFrame* damaged = [CCSpriteFrame frameWithTexture:damageTexture 
                                                         rect:CGRectMake(0, 0, 
                                                                         damageTexture.contentSize.width, 
@@ -82,8 +92,15 @@
 
 - (void)onBacked{
   state_ = KawazTanStateWaiting;
-  type_ = rand()%3;
-  NSString* filename = [NSString stringWithFormat:@"kawaz%d.png", type_];
+  NSString* filename = [NSString string];
+  int r = rand()%100;
+  if(r < 100.0*BOMB_RATE){
+    type_ = KawazTanTypeBomb;
+    filename = @"bomb.png";
+  }else{
+    type_ = rand()%3;
+    filename = [NSString stringWithFormat:@"kawaz%d.png", type_];
+  }
   CCTexture2D* texture = [[CCTextureCache sharedTextureCache] addImage:filename];
   CCSpriteFrame* sprite = [CCSpriteFrame frameWithTexture:texture 
                                                       rect:CGRectMake(0, 0, 
@@ -94,6 +111,10 @@
 
 - (void)toNormal{
   state_ = KawazTanStateNormal;
+  if(type_ == KawazTanTypeBomb){
+    SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
+    [ae playEffect:@"fire.caf"];
+  }
 }
 
 - (void)toMoving{

@@ -8,6 +8,7 @@
 
 #import "MainScene.h"
 #import "KawazTan.h"
+#import "SimpleAudioEngine.h"
 
 @interface MainScene()
 - (void)popTarget;
@@ -36,11 +37,13 @@
       [self addChild:kawaztan z:1001+i];
     }
     for(int i=0;i<3;++i){
-      KawazTan* kawaztan = [[KawazTan alloc] initWithPosition:CGPointMake(320+50*i, 80)];
+      KawazTan* kawaztan = [[KawazTan alloc] initWithPosition:CGPointMake(320+50*i, 70)];
       [targets addObject:kawaztan];
       [self addChild:kawaztan z:1+i];
     }
     targets_ = [[NSArray alloc] initWithArray:targets];
+    SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
+    [ae playBackgroundMusic:@"bgm.caf" loop:YES];
   }
   return self;
 }
