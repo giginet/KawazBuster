@@ -11,7 +11,6 @@
 #import "SimpleAudioEngine.h"
 
 @interface KawazTan()
-- (BOOL)tap;
 - (void)onBacked;
 - (void)toNormal;
 - (void)toMoving;
@@ -33,6 +32,7 @@
   NSString* filename = [NSString stringWithFormat:@"kawaz%d.png", type_];
   self = [super initWithFile:filename];
   if(self){
+    score_ = KAWAZTAN_SCORE;
     self.position = ccp(point.x, point.y);
     state_ = KawazTanStateWaiting;
   }
@@ -97,9 +97,11 @@
   if(r < 100.0*BOMB_RATE){
     type_ = KawazTanTypeBomb;
     filename = @"bomb.png";
+    score_ = BOMB_SCORE;
   }else{
     type_ = rand()%3;
     filename = [NSString stringWithFormat:@"kawaz%d.png", type_];
+    score_ = KAWAZTAN_SCORE;
   }
   CCTexture2D* texture = [[CCTextureCache sharedTextureCache] addImage:filename];
   CCSpriteFrame* sprite = [CCSpriteFrame frameWithTexture:texture 
@@ -121,25 +123,5 @@
   state_ = KawazTanStateMoving;
 }
 
-- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-  CGPoint point = [self convertToWorldSpace:[self convertTouchToNodeSpace:touch]];
-  if([self collideWithPoint:point] && state_ == KawazTanStateNormal){
-    [self tap];
-    return YES;
-  }
-  return NO;
-}
-
-- (void)onEnter{
-  [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self 
-                                                   priority:2000-self.zOrder 
-                                            swallowsTouches:YES];
-  [super onEnter];
-}
-
-- (void)onExit{
-  [[CCTouchDispatcher sharedDispatcher] removeDelegate:self];
-  [super onExit];
-}
 
 @end

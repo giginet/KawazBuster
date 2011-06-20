@@ -25,7 +25,7 @@ typedef enum{
   KawazTanTypeBomb
 } KawazTanType;
 
-@interface KawazTan : KWSprite <CCTargetedTouchDelegate>{
+@interface KawazTan : KWSprite{
  @private
   KawazTanType type_;
   KawazTanState state_;
@@ -35,6 +35,7 @@ typedef enum{
 - (id)initWithPosition:(CGPoint)point;
 - (BOOL)start;
 - (BOOL)isMoving;
+- (BOOL)tap;
 
 @property(readonly) int score;
 @property(readonly) KawazTanState state;

@@ -23,6 +23,8 @@
 
 /* Kawaz-tan tataki! Local Settings */
 #define BOMB_RATE 0.2
+#define KAWAZTAN_SCORE 100
+#define BOMB_SCORE -500
 
 //
 // Define here the type of autorotation that you want for your game

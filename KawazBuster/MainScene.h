@@ -9,6 +9,8 @@
 #import "kwing.h"
 
 @interface MainScene : KWScene {
+  int score_;
+  CCLabelTTF* scoreLabel_;
   NSArray* targets_;
 }
 
