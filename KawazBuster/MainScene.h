@@ -7,11 +7,12 @@
 //
 
 #import "kwing.h"
+#import "CDAudioManager.h"
 
-@interface MainScene : KWScene {
+@interface MainScene : KWScene{
   int score_;
-  CCLabelTTF* scoreLabel_;
   NSArray* targets_;
+  CCLabelTTF* scoreLabel_;
 }
 
 @end

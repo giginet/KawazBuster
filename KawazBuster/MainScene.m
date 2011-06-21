@@ -8,16 +8,16 @@
 
 #import "MainScene.h"
 #import "KawazTan.h"
-#import "SimpleAudioEngine.h"
+#import "KWMusicManager.h"
+#import "GameConfig.h"
+#import <AudioToolbox/AudioServices.h>
 
 @interface MainScene()
 - (void)popTarget;
-
-@property(readwrite, retain) CCLabelTTF* scoreLabel;
+- (void)shakeScreen;
 @end
 
 @implementation MainScene
-@synthesize scoreLabel=scoreLabel_;
 
 - (id)init{
   self = [super init];
@@ -38,31 +38,34 @@
     for(int i=0;i<6;++i){
       KawazTan* kawaztan = [[KawazTan alloc] initWithPosition:CGPointMake(25+50*i, 10)];
       [targets addObject:kawaztan];
-      [self addChild:kawaztan z:1001+i];
+      [self addChild:kawaztan z:1001+(6-i)];
     }
     for(int i=0;i<3;++i){
       KawazTan* kawaztan = [[KawazTan alloc] initWithPosition:CGPointMake(320+50*i, 70)];
       [targets addObject:kawaztan];
-      [self addChild:kawaztan z:1+i];
+      [self addChild:kawaztan z:1+(3-i)];
     }
     targets_ = [[NSArray alloc] initWithArray:targets];
     //　スコアラベルの初期化
-    self.scoreLabel = [CCLabelTTF labelWithString:[[NSNumber numberWithInt:score_] stringValue] 
-                                         fontName:@"Marker Felt" 
-                                         fontSize:24];
+    // メンバ変数に格納しているので、retainして参照カウンタを1上げている
+    scoreLabel_ = [[CCLabelTTF labelWithString:[[NSNumber numberWithInt:score_] stringValue] 
+                                      fontName:@"Marker Felt" 
+                                      fontSize:24] retain];
     scoreLabel_.position = ccp(100, 280);
     [self addChild:scoreLabel_];
-    // 
-    SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
-    [ae playBackgroundMusic:@"bgm.caf" loop:YES];
+    //
+    //CDAudioManager* am = [CDAudioManager sharedManager];
+    //[am playBackgroundMusic:@"bgm_int.caf" loop:YES];
+    KWMusicManager* mm = [KWMusicManager sharedManager];
+    [mm playMusic:@"bgm.caf" intro:@"bgm_int.caf" loop:YES];
     self.isTouchEnabled = YES;
   }
   return self;
 }
 
 - (void)dealloc{
-  [scoreLabel_ release];
   [targets_ release];
+  [scoreLabel_ release];
   [super dealloc];
 }
 
@@ -73,6 +76,20 @@
   }
 }
 
+- (void)shakeScreen{
+  AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+  NSMutableArray* moves = [NSMutableArray array];
+  for(int i=0;i<60;++i){
+    CCFiniteTimeAction* move = [CCMoveTo actionWithDuration:1.0/FPS 
+                                                   position:ccp(30-rand()%60, 15-rand()%60)];
+    [moves addObject:move];
+  }
+  CCFiniteTimeAction* move = [CCMoveTo actionWithDuration:1.0/FPS position:ccp(0, 0)];
+  [moves addObject:move];
+  CCSequence* seq = [CCSequence actionsWithArray:moves];
+  [self runAction:seq];
+}
+
 - (void)popTarget{
   // ターゲット（かわずたん）を沸かせる処理
   int n = rand()%[targets_ count];
@@ -80,7 +97,9 @@
 }
 
 -(void) registerWithTouchDispatcher{
-	[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+	[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self 
+                                                   priority:0 
+                                            swallowsTouches:YES];
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
@@ -89,8 +108,11 @@
     if([target collideWithPoint:point] && target.state == KawazTanStateNormal){
       if([target tap]){
         score_ += target.score;
-        NSLog(@"%d", score_);
+        if(target.type == KawazTanTypeBomb){
+          [self shakeScreen];
+        }
         [scoreLabel_ setString:[[NSNumber numberWithInt:score_] stringValue]];
+        break;
       }
       return YES;
     }

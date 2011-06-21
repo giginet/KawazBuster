@@ -58,6 +58,7 @@
 		07878C8213AF75870095E794 /* fire.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07878C7E13AF75870095E794 /* fire.caf */; };
 		07878C8313AF75870095E794 /* pico.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07878C7F13AF75870095E794 /* pico.caf */; };
 		07878C8413AF75870095E794 /* time_up.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07878C8013AF75870095E794 /* time_up.caf */; };
+		07F7BDA213B06EF200BF1366 /* KWMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F7BDA113B06EF200BF1366 /* KWMusicManager.m */; };
 		07FC8FD1138EAEE5000D5ADB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD0138EAEE5000D5ADB /* QuartzCore.framework */; };
 		07FC8FD3138EAEE5000D5ADB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD2138EAEE5000D5ADB /* OpenGLES.framework */; };
 		07FC8FD5138EAEE5000D5ADB /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC8FD4138EAEE5000D5ADB /* OpenAL.framework */; };
@@ -233,6 +234,8 @@
 		07878C7E13AF75870095E794 /* fire.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = fire.caf; path = Resources/se/fire.caf; sourceTree = "<group>"; };
 		07878C7F13AF75870095E794 /* pico.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pico.caf; path = Resources/se/pico.caf; sourceTree = "<group>"; };
 		07878C8013AF75870095E794 /* time_up.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = time_up.caf; path = Resources/se/time_up.caf; sourceTree = "<group>"; };
+		07F7BDA013B06EF200BF1366 /* KWMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWMusicManager.h; path = libs/kwing/KWMusicManager.h; sourceTree = "<group>"; };
+		07F7BDA113B06EF200BF1366 /* KWMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWMusicManager.m; path = libs/kwing/KWMusicManager.m; sourceTree = "<group>"; };
 		07FC8FCC138EAEE5000D5ADB /* KawazBuster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KawazBuster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FC8FD0138EAEE5000D5ADB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		07FC8FD2138EAEE5000D5ADB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -976,6 +979,8 @@
 		07FC9146138EB665000D5ADB /* Kwing */ = {
 			isa = PBXGroup;
 			children = (
+				07F7BDA013B06EF200BF1366 /* KWMusicManager.h */,
+				07F7BDA113B06EF200BF1366 /* KWMusicManager.m */,
 				074CB02D13A75399006FB6EC /* KWScene.h */,
 				074CB02E13A75399006FB6EC /* KWScene.m */,
 				074CB02A13A75380006FB6EC /* kwing.h */,
@@ -1212,6 +1217,7 @@
 				074CB05E13A759E4006FB6EC /* LogoScene.m in Sources */,
 				076A4E3E13A770AE00C04B06 /* MainScene.m in Sources */,
 				0739340E13A8AEBB00CAC438 /* KawazTan.m in Sources */,
+				07F7BDA213B06EF200BF1366 /* KWMusicManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

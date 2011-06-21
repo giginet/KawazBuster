@@ -39,4 +39,5 @@ typedef enum{
 
 @property(readonly) int score;
 @property(readonly) KawazTanState state;
+@property(readonly) KawazTanType type;
 @end

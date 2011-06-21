@@ -95,7 +95,8 @@
 	
 	[director setAnimationInterval:1.0/FPS];
 	[director setDisplayFPS:YES];
-	
+  // マルチタッチを有効にする
+  [glView setMultipleTouchEnabled:YES];
   // initialize rand
   srand(time(NULL));
 	

@@ -17,7 +17,7 @@
 @end
 
 @implementation KawazTan
-@synthesize score=score_, state=state_;
+@synthesize score=score_, state=state_, type=type_;
 
 - (id)initWithTexture:(CCTexture2D *)texture rect:(CGRect)rect{
   self = [super initWithTexture:texture rect:rect];

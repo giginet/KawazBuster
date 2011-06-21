@@ -15,3 +15,4 @@
 #import "KWSingleton.h"
 #import "KWTimer.h"
 #import "KWVector.h"
+#import "KWMusicManager.h"
