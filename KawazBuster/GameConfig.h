@@ -25,6 +25,7 @@
 #define BOMB_RATE 0.2
 #define KAWAZTAN_SCORE 100
 #define BOMB_SCORE -500
+#define INITIAL_HIGHSCORE 2000
 
 //
 // Define here the type of autorotation that you want for your game

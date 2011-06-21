@@ -61,6 +61,10 @@
   return NO;
 }
 
+- (BOOL)canTouch{
+  return state_ == KawazTanStateNormal || state_ == KawazTanStateInvinsible || state_ == KawazTanStateDamaged;
+}
+
 - (BOOL)start{
   if(![self isMoving]){
     state_ = KawazTanStateMoving;

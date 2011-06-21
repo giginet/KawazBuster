@@ -36,6 +36,7 @@ typedef enum{
 - (BOOL)start;
 - (BOOL)isMoving;
 - (BOOL)tap;
+- (BOOL)canTouch;
 
 @property(readonly) int score;
 @property(readonly) KawazTanState state;

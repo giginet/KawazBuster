@@ -15,6 +15,7 @@
 @interface MainScene()
 - (void)popTarget;
 - (void)shakeScreen;
+- (void)getScore:(int)score;
 @end
 
 @implementation MainScene
@@ -24,6 +25,8 @@
   if(self){
     // コンストラクタ
     score_ = 0;
+    NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+    highScore_ =  [ud integerForKey:@"highScore"];
     KWSprite* bg0 = [KWSprite spriteWithFile:@"main_background.png"];
     KWSprite* bg1 = [KWSprite spriteWithFile:@"main_layer0.png"];
     KWSprite* bg2 = [KWSprite spriteWithFile:@"main_layer1.png"];
@@ -48,14 +51,34 @@
     targets_ = [[NSArray alloc] initWithArray:targets];
     //　スコアラベルの初期化
     // メンバ変数に格納しているので、retainして参照カウンタを1上げている
+    
     scoreLabel_ = [[CCLabelTTF labelWithString:[[NSNumber numberWithInt:score_] stringValue] 
                                       fontName:@"Marker Felt" 
                                       fontSize:24] retain];
-    scoreLabel_.position = ccp(100, 280);
+    highScoreLabel_ = [[CCLabelTTF labelWithString:[[NSNumber numberWithInt:highScore_] stringValue] 
+                                         fontName:@"Marker Felt" 
+                                         fontSize:24] retain];
+    timerLabel_ = [[GameTimer labelWithString:@"0"
+                                      fontName:@"Marker Felt" 
+                                      fontSize:24] retain];
+    [timerLabel_ setTime:0 minute:1 second:0];
+    [timerLabel_ play];
+    CCLabelTTF* scoreLabel = [CCLabelTTF labelWithString:@"Score" fontName:@"Marker Felt" fontSize:24];
+    CCLabelTTF* highScoreLabel = [CCLabelTTF labelWithString:@"HighScore" fontName:@"Marker Felt" fontSize:24];
+    CCLabelTTF* timeLabel = [CCLabelTTF labelWithString:@"Time" fontName:@"Marker Felt" fontSize:24];
+    scoreLabel.position = ccp(50, 300);
+    scoreLabel_.position = ccp(50, 270);
+    highScoreLabel.position = ccp(400, 300);
+    highScoreLabel_.position = ccp(400, 270);
+    timeLabel.position = ccp(winSize_.width/2, 300);
+    timerLabel_.position = ccp(winSize_.width/2, 270);
+    [self addChild:scoreLabel];
     [self addChild:scoreLabel_];
+    [self addChild:highScoreLabel];
+    [self addChild:highScoreLabel_];
+    [self addChild:timeLabel];
+    [self addChild:timerLabel_];
     //
-    //CDAudioManager* am = [CDAudioManager sharedManager];
-    //[am playBackgroundMusic:@"bgm_int.caf" loop:YES];
     KWMusicManager* mm = [KWMusicManager sharedManager];
     [mm playMusic:@"bgm.caf" intro:@"bgm_int.caf" loop:YES];
     self.isTouchEnabled = YES;
@@ -78,16 +101,23 @@
 
 - (void)shakeScreen{
   AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-  NSMutableArray* moves = [NSMutableArray array];
-  for(int i=0;i<60;++i){
+  NSMutableArray* actions = [NSMutableArray array];
+  for(int i=0;i<FPS;++i){
     CCFiniteTimeAction* move = [CCMoveTo actionWithDuration:1.0/FPS 
                                                    position:ccp(30-rand()%60, 15-rand()%60)];
-    [moves addObject:move];
+    [actions addObject:move];
   }
-  CCFiniteTimeAction* move = [CCMoveTo actionWithDuration:1.0/FPS position:ccp(0, 0)];
-  [moves addObject:move];
-  CCSequence* seq = [CCSequence actionsWithArray:moves];
-  [self runAction:seq];
+  CCFiniteTimeAction* reset = [CCMoveTo actionWithDuration:1.0/FPS position:ccp(0, 0)];
+  [actions addObject:reset];
+  [self runAction:[CCSequence actionsWithArray:actions]];
+}
+
+- (void)getScore:(int)score{
+  score_ += score;
+  if(score_ < 0){
+    score_ = 0;
+  }
+  [scoreLabel_ setString:[[NSNumber numberWithInt:score_] stringValue]];
 }
 
 - (void)popTarget{
@@ -105,13 +135,12 @@
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
   CGPoint point = [self convertToWorldSpace:[self convertTouchToNodeSpace:touch]];
   for(KawazTan* target in targets_){
-    if([target collideWithPoint:point] && target.state == KawazTanStateNormal){
+    if([target collideWithPoint:point] && [target canTouch]){
       if([target tap]){
-        score_ += target.score;
+        [self getScore:target.score];
         if(target.type == KawazTanTypeBomb){
           [self shakeScreen];
         }
-        [scoreLabel_ setString:[[NSNumber numberWithInt:score_] stringValue]];
         break;
       }
       return YES;

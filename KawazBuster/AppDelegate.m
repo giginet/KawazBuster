@@ -99,7 +99,10 @@
   [glView setMultipleTouchEnabled:YES];
   // initialize rand
   srand(time(NULL));
-	
+  //ハイスコアを初期化する
+  NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+  [ud registerDefaults:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:INITIAL_HIGHSCORE] forKey:@"highScore"]];
+  
 	// make the OpenGLView a child of the view controller
 	[viewController setView:glView];
 	

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073524F613B0B43A007B8CF8 /* GameTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 073524F513B0B439007B8CF8 /* GameTimer.m */; };
 		0739340E13A8AEBB00CAC438 /* KawazTan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0739340D13A8AEBA00CAC438 /* KawazTan.m */; };
 		074CB03713A7539A006FB6EC /* KWAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB02C13A75399006FB6EC /* KWAnimation.m */; };
 		074CB03813A7539A006FB6EC /* KWScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB02E13A75399006FB6EC /* KWScene.m */; };
@@ -172,6 +173,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		073524F413B0B439007B8CF8 /* GameTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTimer.h; sourceTree = "<group>"; };
+		073524F513B0B439007B8CF8 /* GameTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTimer.m; sourceTree = "<group>"; };
 		0739340C13A8AEBA00CAC438 /* KawazTan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KawazTan.h; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/KawazTan.h; sourceTree = "<group>"; };
 		0739340D13A8AEBA00CAC438 /* KawazTan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KawazTan.m; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/KawazTan.m; sourceTree = "<group>"; };
 		074CB02A13A75380006FB6EC /* kwing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kwing.h; path = libs/kwing/kwing.h; sourceTree = "<group>"; };
@@ -642,6 +645,8 @@
 				07FC9138138EAEE8000D5ADB /* HelloWorldLayer.h */,
 				07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */,
 				07FC913B138EAEE8000D5ADB /* GameConfig.h */,
+				073524F413B0B439007B8CF8 /* GameTimer.h */,
+				073524F513B0B439007B8CF8 /* GameTimer.m */,
 				07FC8FE1138EAEE5000D5ADB /* Resources */,
 				07FC8FF5138EAEE5000D5ADB /* libs */,
 				07FC912E138EAEE8000D5ADB /* Supporting Files */,
@@ -1218,6 +1223,7 @@
 				076A4E3E13A770AE00C04B06 /* MainScene.m in Sources */,
 				0739340E13A8AEBB00CAC438 /* KawazTan.m in Sources */,
 				07F7BDA213B06EF200BF1366 /* KWMusicManager.m in Sources */,
+				073524F613B0B43A007B8CF8 /* GameTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

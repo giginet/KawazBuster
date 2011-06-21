@@ -8,11 +8,15 @@
 
 #import "kwing.h"
 #import "CDAudioManager.h"
+#import "GameTimer.h"
 
 @interface MainScene : KWScene{
   int score_;
+  int highScore_;
   NSArray* targets_;
   CCLabelTTF* scoreLabel_;
+  CCLabelTTF* highScoreLabel_;
+  GameTimer* timerLabel_;
 }
 
 @end
