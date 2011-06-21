@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		073524F613B0B43A007B8CF8 /* GameTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 073524F513B0B439007B8CF8 /* GameTimer.m */; };
+		073524FC13B0EA5E007B8CF8 /* title.caf in Resources */ = {isa = PBXBuildFile; fileRef = 073524FB13B0EA5E007B8CF8 /* title.caf */; };
 		0739340E13A8AEBB00CAC438 /* KawazTan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0739340D13A8AEBA00CAC438 /* KawazTan.m */; };
 		074CB03713A7539A006FB6EC /* KWAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB02C13A75399006FB6EC /* KWAnimation.m */; };
 		074CB03813A7539A006FB6EC /* KWScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB02E13A75399006FB6EC /* KWScene.m */; };
@@ -175,6 +176,7 @@
 /* Begin PBXFileReference section */
 		073524F413B0B439007B8CF8 /* GameTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTimer.h; sourceTree = "<group>"; };
 		073524F513B0B439007B8CF8 /* GameTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTimer.m; sourceTree = "<group>"; };
+		073524FB13B0EA5E007B8CF8 /* title.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = title.caf; sourceTree = "<group>"; };
 		0739340C13A8AEBA00CAC438 /* KawazTan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KawazTan.h; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/KawazTan.h; sourceTree = "<group>"; };
 		0739340D13A8AEBA00CAC438 /* KawazTan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KawazTan.m; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/KawazTan.m; sourceTree = "<group>"; };
 		074CB02A13A75380006FB6EC /* kwing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kwing.h; path = libs/kwing/kwing.h; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 		074CB03E13A7543F006FB6EC /* music */ = {
 			isa = PBXGroup;
 			children = (
+				073524FB13B0EA5E007B8CF8 /* title.caf */,
 				07878C6F13AF74550095E794 /* bgm_int_tempo_up.caf */,
 				07878C7013AF74550095E794 /* bgm_int.caf */,
 				07878C7113AF74550095E794 /* bgm_tempo_up.caf */,
@@ -1104,6 +1107,7 @@
 				07878C8213AF75870095E794 /* fire.caf in Resources */,
 				07878C8313AF75870095E794 /* pico.caf in Resources */,
 				07878C8413AF75870095E794 /* time_up.caf in Resources */,
+				073524FC13B0EA5E007B8CF8 /* title.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

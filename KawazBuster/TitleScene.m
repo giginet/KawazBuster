@@ -8,7 +8,7 @@
 
 #import "TitleScene.h"
 #import "MainScene.h"
-#import "SimpleAudioEngine.h"
+#import "KWMusicManager.h"
 
 /*
  無名カテゴリ
@@ -59,18 +59,18 @@
     [self addChild:logo_];
     [self addChild:menu];
     // タイトル音楽の再生
-    SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
-    [ae playBackgroundMusic:@"title.wav" loop:NO];
+    KWMusicManager* mm = [KWMusicManager sharedManager];
+    [mm playMusic:@"title.caf" loop:NO];
   }
 	return self;
 }
 
 - (void)pressStartButton:(id)sender{
   CCScene* mainScene = [MainScene scene];
-  CCTransitionFade* transition = [CCTransitionZoomFlipAngular transitionWithDuration:0.5f scene:mainScene];
+  CCTransitionFade* transition = [CCTransitionPageTurn transitionWithDuration:0.5f scene:mainScene];
   [[CCDirector sharedDirector] replaceScene:transition];
-  SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
-  [ae stopBackgroundMusic];
+  KWMusicManager* mm = [KWMusicManager sharedManager];
+  [mm fadeout:0.5];
 }
 
 - (void)pressExitButton:(id)sender{

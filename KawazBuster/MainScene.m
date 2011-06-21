@@ -13,6 +13,10 @@
 #import <AudioToolbox/AudioServices.h>
 
 @interface MainScene()
+- (void)playMusic:(ccTime)dt;
+- (void)startGame;
+- (void)hurryUp;
+- (void)endGame;
 - (void)popTarget;
 - (void)shakeScreen;
 - (void)getScore:(int)score;
@@ -25,6 +29,7 @@
   if(self){
     // コンストラクタ
     score_ = 0;
+    active_ = NO;
     NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
     highScore_ =  [ud integerForKey:@"highScore"];
     KWSprite* bg0 = [KWSprite spriteWithFile:@"main_background.png"];
@@ -62,7 +67,6 @@
                                       fontName:@"Marker Felt" 
                                       fontSize:24] retain];
     [timerLabel_ setTime:0 minute:1 second:0];
-    [timerLabel_ play];
     CCLabelTTF* scoreLabel = [CCLabelTTF labelWithString:@"Score" fontName:@"Marker Felt" fontSize:24];
     CCLabelTTF* highScoreLabel = [CCLabelTTF labelWithString:@"HighScore" fontName:@"Marker Felt" fontSize:24];
     CCLabelTTF* timeLabel = [CCLabelTTF labelWithString:@"Time" fontName:@"Marker Felt" fontSize:24];
@@ -79,8 +83,7 @@
     [self addChild:timeLabel];
     [self addChild:timerLabel_];
     //
-    KWMusicManager* mm = [KWMusicManager sharedManager];
-    [mm playMusic:@"bgm.caf" intro:@"bgm_int.caf" loop:YES];
+    [self schedule:@selector(playMusic:) interval:2.0];
     self.isTouchEnabled = YES;
   }
   return self;
@@ -94,9 +97,34 @@
 
 - (void)update:(ccTime)dt{
   [super update:dt];
-  if(rand()%50 == 0){
+  if(active_ && rand()%50 == 0){
     [self popTarget];
   }
+}
+
+- (void)playMusic:(ccTime)dt{
+  KWMusicManager* mm = [KWMusicManager sharedManager];
+  [mm setIntroMusicCompletionListener:self selector:@selector(startGame)];
+  [mm playMusic:@"bgm.caf" intro:@"bgm_int.caf" loop:YES];
+  [self schedule:@selector(hurryUp) interval:40.0];
+  [self unschedule:@selector(playMusic:)];
+}
+
+- (void)startGame{
+  active_ = YES;
+  [timerLabel_ play];
+}
+
+- (void)hurryUp{
+  [self unschedule:@selector(hurryUp)];
+  KWMusicManager* mm = [KWMusicManager sharedManager];
+  [mm changeMusic:@"bgm_tempo_up.caf" intro:@"bgm_int_tempo_up.caf" loop:YES fadeout:1.0];
+}
+
+- (void)popTarget{
+  // ターゲット（かわずたん）を沸かせる処理
+  int n = rand()%[targets_ count];
+  [(KawazTan*)[targets_ objectAtIndex:n] start];
 }
 
 - (void)shakeScreen{
@@ -118,12 +146,6 @@
     score_ = 0;
   }
   [scoreLabel_ setString:[[NSNumber numberWithInt:score_] stringValue]];
-}
-
-- (void)popTarget{
-  // ターゲット（かわずたん）を沸かせる処理
-  int n = rand()%[targets_ count];
-  [(KawazTan*)[targets_ objectAtIndex:n] start];
 }
 
 -(void) registerWithTouchDispatcher{

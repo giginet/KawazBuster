@@ -44,7 +44,7 @@ static BOOL _willDelete = NO;
 	}
 }
 
-- (void) release{
+- (void)release{
 	@synchronized(self){
 		if(_willDelete){
 			[super release];

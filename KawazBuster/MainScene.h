@@ -13,6 +13,7 @@
 @interface MainScene : KWScene{
   int score_;
   int highScore_;
+  BOOL active_;
   NSArray* targets_;
   CCLabelTTF* scoreLabel_;
   CCLabelTTF* highScoreLabel_;
