@@ -10,9 +10,10 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "KWScene.h"
-#import "KWSprite.h"
 #import "KWSingleton.h"
 #import "KWTimer.h"
 #import "KWVector.h"
+#import "KWScene.h"
+#import "KWSprite.h"
+#import "KWAnimation.h"
 #import "KWMusicManager.h"

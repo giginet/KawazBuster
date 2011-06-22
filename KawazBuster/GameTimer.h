@@ -20,6 +20,8 @@ typedef struct{
   BOOL displayMiliSecond_;
   Time initial_;
   Time current_;
+  id onFinishListener_;
+  SEL onFinishSelector_;
 }
 
 - (void)play;
@@ -27,6 +29,7 @@ typedef struct{
 - (void)setTime:(int)hour minute:(int)minute second:(int)second;
 - (BOOL)isActive;
 - (int)leaveSecond;
+- (void)setTimerCompletionListener:(id)listener selector:(SEL)selector;
 
 @property(readwrite) BOOL displayMiliSecond;
 

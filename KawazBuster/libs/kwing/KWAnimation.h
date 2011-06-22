@@ -8,10 +8,13 @@
 
 #import "kwing.h"
 
-@interface KWAnimation : KWSingleton {
+@interface KWAnimation : NSObject {
 }
 
-+ (id)spriteWithTexture:(CCTexture2D *)texture andSize:(CGSize)size;
-+ (id)spriteWithFile:(NSString *)filename andSize:(CGSize)size;
++ (id)spriteWithArray:(NSArray*)textures andAPS:(float)aps;
++ (id)spriteWithFiles:(NSArray*)files andAPS:(float)aps;
++ (id)spriteWithFile:(NSString *)filename andSize:(CGSize)size andAPS:(float)aps;
++ (id)spriteWithTextureAtlas:(CCTexture2D *)texture andSize:(CGSize)size andAPS:(float)aps;
++ (id)spriteWithSpriteFrames:(NSArray*)frames andAPS:(float)aps;
 
 @end

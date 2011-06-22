@@ -8,6 +8,7 @@
 
 #import "TitleScene.h"
 #import "MainScene.h"
+#import "HowtoScene.h"
 #import "KWMusicManager.h"
 
 /*
@@ -66,8 +67,7 @@
 }
 
 - (void)pressStartButton:(id)sender{
-  CCScene* mainScene = [MainScene scene];
-  CCTransitionFade* transition = [CCTransitionPageTurn transitionWithDuration:0.5f scene:mainScene];
+  CCTransitionFade* transition = [CCTransitionPageTurn transitionWithDuration:0.5f scene:[MainScene scene]];
   [[CCDirector sharedDirector] replaceScene:transition];
   KWMusicManager* mm = [KWMusicManager sharedManager];
   [mm fadeout:0.5];
@@ -77,6 +77,8 @@
 }
 
 - (void)pressHowtoButton:(id)sender{
+  CCTransitionFade* transition = [CCTransitionCrossFade transitionWithDuration:0.5f scene:[HowtoScene scene]];
+  [[CCDirector sharedDirector] pushScene:transition];
 }
 
 - (void) dealloc{

@@ -24,6 +24,8 @@
   if (self) {
     active_ = NO;
     displayMiliSecond_ = NO;
+    onFinishListener_ = nil;
+    onFinishSelector_ = nil;
     [self setTime:0 minute:0 second:0];
     [self setString:[self humalize]];
   }
@@ -87,10 +89,17 @@
 }
 
 - (void)tick:(ccTime)dt{
-  if([self leaveSecond] > 0 && active_){
-    NSTimeInterval second = [self convertToSecond:current_];
-    second -= dt;
-    current_ = [self convertToTime:second];
+  if([self leaveSecond] > 0){
+    if(active_){
+      NSTimeInterval second = [self convertToSecond:current_];
+      second -= dt;
+      current_ = [self convertToTime:second];
+    }
+  }else{
+    if (onFinishSelector_ && active_) {
+      [onFinishListener_ performSelector:onFinishSelector_];
+    }	
+    active_ = NO;
   }
   [self setString:[self humalize]];
 }
@@ -107,6 +116,11 @@
 - (NSTimeInterval)convertToSecond:(Time)time{
   float ms = (double)(time.milisecond)/1000.0;
   return 3600*time.hour + 60*time.minute + time.second + ms;
+}
+
+- (void)setTimerCompletionListener:(id)listener selector:(SEL)selector{
+  onFinishListener_ = listener;
+  onFinishSelector_ = selector;
 }
 
 @end

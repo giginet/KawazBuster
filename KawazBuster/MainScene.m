@@ -10,6 +10,7 @@
 #import "KawazTan.h"
 #import "KWMusicManager.h"
 #import "GameConfig.h"
+#import "SimpleAudioEngine.h"
 #import <AudioToolbox/AudioServices.h>
 
 @interface MainScene()
@@ -84,6 +85,7 @@
     [self addChild:timerLabel_];
     //
     [self schedule:@selector(playMusic:) interval:2.0];
+    [timerLabel_ setTimerCompletionListener:self selector:@selector(endGame)];
     self.isTouchEnabled = YES;
   }
   return self;
@@ -119,6 +121,15 @@
   [self unschedule:@selector(hurryUp)];
   KWMusicManager* mm = [KWMusicManager sharedManager];
   [mm changeMusic:@"bgm_tempo_up.caf" intro:@"bgm_int_tempo_up.caf" loop:YES fadeout:1.0];
+}
+
+- (void)endGame{
+  SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
+  [ae playEffect:@"time_up.caf"];
+  KWMusicManager* mm = [KWMusicManager sharedManager];
+  //[mm changeMusic:@"game_over.caf" intro:nil loop:NO fadeout:1.0];
+  [mm playMusic:@"game_over.caf" loop:NO];
+  active_ = NO;
 }
 
 - (void)popTarget{

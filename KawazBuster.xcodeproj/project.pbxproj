@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		073524F613B0B43A007B8CF8 /* GameTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 073524F513B0B439007B8CF8 /* GameTimer.m */; };
 		073524FC13B0EA5E007B8CF8 /* title.caf in Resources */ = {isa = PBXBuildFile; fileRef = 073524FB13B0EA5E007B8CF8 /* title.caf */; };
+		073524FF13B0F3B4007B8CF8 /* start.caf in Resources */ = {isa = PBXBuildFile; fileRef = 073524FE13B0F3B4007B8CF8 /* start.caf */; };
 		0739340E13A8AEBB00CAC438 /* KawazTan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0739340D13A8AEBA00CAC438 /* KawazTan.m */; };
 		074CB03713A7539A006FB6EC /* KWAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB02C13A75399006FB6EC /* KWAnimation.m */; };
 		074CB03813A7539A006FB6EC /* KWScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB02E13A75399006FB6EC /* KWScene.m */; };
@@ -28,6 +29,15 @@
 		074CB05713A757E4006FB6EC /* title_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04D13A757E4006FB6EC /* title_background.png */; };
 		074CB05B13A759A7006FB6EC /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB05A13A759A5006FB6EC /* TitleScene.m */; };
 		074CB05E13A759E4006FB6EC /* LogoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB05D13A759E3006FB6EC /* LogoScene.m */; };
+		0766E9DA13B281020007E7F3 /* howto_button-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D413B281020007E7F3 /* howto_button-hd.png */; };
+		0766E9DB13B281020007E7F3 /* howto_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D513B281020007E7F3 /* howto_button.png */; };
+		0766E9DC13B281020007E7F3 /* howto0-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D613B281020007E7F3 /* howto0-hd.png */; };
+		0766E9DD13B281020007E7F3 /* howto0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D713B281020007E7F3 /* howto0.png */; };
+		0766E9DE13B281020007E7F3 /* howto1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D813B281020007E7F3 /* howto1-hd.png */; };
+		0766E9DF13B281020007E7F3 /* howto1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D913B281020007E7F3 /* howto1.png */; };
+		0766E9E313B2813E0007E7F3 /* HowtoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766E9E213B2813E0007E7F3 /* HowtoScene.m */; };
+		0766EA5A13B298CE0007E7F3 /* KWState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766EA5913B298CD0007E7F3 /* KWState.m */; };
+		0766EA5D13B2990C0007E7F3 /* KWStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766EA5C13B2990A0007E7F3 /* KWStateManager.m */; };
 		076A4E3E13A770AE00C04B06 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A4E3D13A770AE00C04B06 /* MainScene.m */; };
 		076A4E4513A7775F00C04B06 /* main_background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E3F13A7775C00C04B06 /* main_background-hd.png */; };
 		076A4E4613A7775F00C04B06 /* main_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E4013A7775D00C04B06 /* main_background.png */; };
@@ -177,6 +187,7 @@
 		073524F413B0B439007B8CF8 /* GameTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTimer.h; sourceTree = "<group>"; };
 		073524F513B0B439007B8CF8 /* GameTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTimer.m; sourceTree = "<group>"; };
 		073524FB13B0EA5E007B8CF8 /* title.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = title.caf; sourceTree = "<group>"; };
+		073524FE13B0F3B4007B8CF8 /* start.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = start.caf; sourceTree = "<group>"; };
 		0739340C13A8AEBA00CAC438 /* KawazTan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KawazTan.h; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/KawazTan.h; sourceTree = "<group>"; };
 		0739340D13A8AEBA00CAC438 /* KawazTan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KawazTan.m; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/KawazTan.m; sourceTree = "<group>"; };
 		074CB02A13A75380006FB6EC /* kwing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kwing.h; path = libs/kwing/kwing.h; sourceTree = "<group>"; };
@@ -206,6 +217,18 @@
 		074CB05A13A759A5006FB6EC /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
 		074CB05C13A759E1006FB6EC /* LogoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoScene.h; sourceTree = "<group>"; };
 		074CB05D13A759E3006FB6EC /* LogoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoScene.m; sourceTree = "<group>"; };
+		0766E9D413B281020007E7F3 /* howto_button-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "howto_button-hd.png"; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto_button-hd.png"; sourceTree = "<group>"; };
+		0766E9D513B281020007E7F3 /* howto_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howto_button.png; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto_button.png"; sourceTree = "<group>"; };
+		0766E9D613B281020007E7F3 /* howto0-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "howto0-hd.png"; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto0-hd.png"; sourceTree = "<group>"; };
+		0766E9D713B281020007E7F3 /* howto0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howto0.png; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto0.png"; sourceTree = "<group>"; };
+		0766E9D813B281020007E7F3 /* howto1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "howto1-hd.png"; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto1-hd.png"; sourceTree = "<group>"; };
+		0766E9D913B281020007E7F3 /* howto1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howto1.png; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto1.png"; sourceTree = "<group>"; };
+		0766E9E113B2813E0007E7F3 /* HowtoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HowtoScene.h; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/HowtoScene.h; sourceTree = "<group>"; };
+		0766E9E213B2813E0007E7F3 /* HowtoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HowtoScene.m; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/HowtoScene.m; sourceTree = "<group>"; };
+		0766EA5813B298CC0007E7F3 /* KWState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWState.h; path = /Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/libs/kwing/KWState.h; sourceTree = "<absolute>"; };
+		0766EA5913B298CD0007E7F3 /* KWState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWState.m; path = /Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/libs/kwing/KWState.m; sourceTree = "<absolute>"; };
+		0766EA5B13B299090007E7F3 /* KWStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWStateManager.h; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/libs/kwing/KWStateManager.h; sourceTree = "<group>"; };
+		0766EA5C13B2990A0007E7F3 /* KWStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWStateManager.m; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/libs/kwing/KWStateManager.m; sourceTree = "<group>"; };
 		076A4E3C13A770AD00C04B06 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
 		076A4E3D13A770AE00C04B06 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
 		076A4E3F13A7775C00C04B06 /* main_background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "main_background-hd.png"; path = "Resources/image/main/main_background-hd.png"; sourceTree = "<group>"; };
@@ -506,6 +529,7 @@
 		074CB03D13A75439006FB6EC /* image */ = {
 			isa = PBXGroup;
 			children = (
+				0766E9D213B27D7E0007E7F3 /* howto */,
 				07878AE713AEFED00095E794 /* Icon@2x.png */,
 				07878AE813AEFED00095E794 /* Icon.png */,
 				076A4E4B13A7776700C04B06 /* main */,
@@ -532,6 +556,7 @@
 		074CB03F13A75445006FB6EC /* se */ = {
 			isa = PBXGroup;
 			children = (
+				073524FE13B0F3B4007B8CF8 /* start.caf */,
 				07878C7D13AF75870095E794 /* bomb.caf */,
 				07878C7E13AF75870095E794 /* fire.caf */,
 				07878C7F13AF75870095E794 /* pico.caf */,
@@ -555,6 +580,34 @@
 				074CB04D13A757E4006FB6EC /* title_background.png */,
 			);
 			name = title;
+			sourceTree = "<group>";
+		};
+		0766E9D213B27D7E0007E7F3 /* howto */ = {
+			isa = PBXGroup;
+			children = (
+				0766E9D413B281020007E7F3 /* howto_button-hd.png */,
+				0766E9D513B281020007E7F3 /* howto_button.png */,
+				0766E9D613B281020007E7F3 /* howto0-hd.png */,
+				0766E9D713B281020007E7F3 /* howto0.png */,
+				0766E9D813B281020007E7F3 /* howto1-hd.png */,
+				0766E9D913B281020007E7F3 /* howto1.png */,
+			);
+			name = howto;
+			sourceTree = "<group>";
+		};
+		0766E9E013B281150007E7F3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				074CB05C13A759E1006FB6EC /* LogoScene.h */,
+				074CB05D13A759E3006FB6EC /* LogoScene.m */,
+				074CB05913A759A4006FB6EC /* TitleScene.h */,
+				074CB05A13A759A5006FB6EC /* TitleScene.m */,
+				076A4E3C13A770AD00C04B06 /* MainScene.h */,
+				076A4E3D13A770AE00C04B06 /* MainScene.m */,
+				0766E9E113B2813E0007E7F3 /* HowtoScene.h */,
+				0766E9E213B2813E0007E7F3 /* HowtoScene.m */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 		076A4E4B13A7776700C04B06 /* main */ = {
@@ -633,14 +686,9 @@
 		07FC8FE0138EAEE5000D5ADB /* KawazBuster */ = {
 			isa = PBXGroup;
 			children = (
+				0766E9E013B281150007E7F3 /* Scenes */,
 				0739340C13A8AEBA00CAC438 /* KawazTan.h */,
 				0739340D13A8AEBA00CAC438 /* KawazTan.m */,
-				076A4E3C13A770AD00C04B06 /* MainScene.h */,
-				076A4E3D13A770AE00C04B06 /* MainScene.m */,
-				074CB05C13A759E1006FB6EC /* LogoScene.h */,
-				074CB05D13A759E3006FB6EC /* LogoScene.m */,
-				074CB05913A759A4006FB6EC /* TitleScene.h */,
-				074CB05A13A759A5006FB6EC /* TitleScene.m */,
 				07FC9132138EAEE8000D5ADB /* AppDelegate.h */,
 				07FC9133138EAEE8000D5ADB /* AppDelegate.m */,
 				07FC9135138EAEE8000D5ADB /* RootViewController.h */,
@@ -987,6 +1035,10 @@
 		07FC9146138EB665000D5ADB /* Kwing */ = {
 			isa = PBXGroup;
 			children = (
+				0766EA5813B298CC0007E7F3 /* KWState.h */,
+				0766EA5913B298CD0007E7F3 /* KWState.m */,
+				0766EA5B13B299090007E7F3 /* KWStateManager.h */,
+				0766EA5C13B2990A0007E7F3 /* KWStateManager.m */,
 				07F7BDA013B06EF200BF1366 /* KWMusicManager.h */,
 				07F7BDA113B06EF200BF1366 /* KWMusicManager.m */,
 				074CB02D13A75399006FB6EC /* KWScene.h */,
@@ -1108,6 +1160,13 @@
 				07878C8313AF75870095E794 /* pico.caf in Resources */,
 				07878C8413AF75870095E794 /* time_up.caf in Resources */,
 				073524FC13B0EA5E007B8CF8 /* title.caf in Resources */,
+				073524FF13B0F3B4007B8CF8 /* start.caf in Resources */,
+				0766E9DA13B281020007E7F3 /* howto_button-hd.png in Resources */,
+				0766E9DB13B281020007E7F3 /* howto_button.png in Resources */,
+				0766E9DC13B281020007E7F3 /* howto0-hd.png in Resources */,
+				0766E9DD13B281020007E7F3 /* howto0.png in Resources */,
+				0766E9DE13B281020007E7F3 /* howto1-hd.png in Resources */,
+				0766E9DF13B281020007E7F3 /* howto1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1228,6 +1287,9 @@
 				0739340E13A8AEBB00CAC438 /* KawazTan.m in Sources */,
 				07F7BDA213B06EF200BF1366 /* KWMusicManager.m in Sources */,
 				073524F613B0B43A007B8CF8 /* GameTimer.m in Sources */,
+				0766E9E313B2813E0007E7F3 /* HowtoScene.m in Sources */,
+				0766EA5A13B298CE0007E7F3 /* KWState.m in Sources */,
+				0766EA5D13B2990C0007E7F3 /* KWStateManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
