@@ -160,12 +160,13 @@
 }
 
 - (void)endGame{
+  [self stopAllActions];
+  self.position = ccp(0, 0); // たまに爆弾を使った後の位置が補正されないので、ここで補正してやる
   SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
   [ae playEffect:@"time_up.caf"];
   KWSprite* finish = [KWSprite spriteWithFile:@"finish.png"];
   finish.scale = 0;
   finish.position = ccp(winSize_.width/2, winSize_.height/2);
-  self.position = ccp(0, 0); // たまに爆弾を使った後の位置が補正されないので、ここで補正してやる
   id appear = [CCEaseExponentialIn actionWithAction:[CCScaleTo actionWithDuration:0.25f scale:1.0]];
   id wait = [CCMoveBy actionWithDuration:1.0f];
   id disapper = [CCEaseExponentialOut actionWithAction:[CCScaleTo actionWithDuration:0.25f scale:0]];
