@@ -59,9 +59,6 @@
     [self addChild:background];
     [self addChild:logo_];
     [self addChild:menu];
-    // タイトル音楽の再生
-    KWMusicManager* mm = [KWMusicManager sharedManager];
-    [mm playMusic:@"title.caf" loop:NO];
   }
 	return self;
 }
@@ -79,6 +76,12 @@
 - (void)pressHowtoButton:(id)sender{
   CCTransitionFade* transition = [CCTransitionCrossFade transitionWithDuration:0.5f scene:[HowtoScene scene]];
   [[CCDirector sharedDirector] pushScene:transition];
+}
+
+- (void)onEnterTransitionDidFinish{
+  // タイトル音楽の再生
+  KWMusicManager* mm = [KWMusicManager sharedManager];
+  [mm playMusic:@"title.caf" loop:NO];
 }
 
 - (void) dealloc{
