@@ -20,6 +20,7 @@
 #define kGameAutorotationUIViewController 2
 #define FPS 60
 #define SKIPTITLE NO
+#define SHOW_FPS NO
 
 /* Kawaz-tan tataki! Local Settings */
 #define BOMB_RATE 0.2

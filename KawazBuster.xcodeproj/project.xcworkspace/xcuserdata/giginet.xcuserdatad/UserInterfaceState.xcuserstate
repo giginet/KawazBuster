@@ -28706,7 +28706,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.90564197</real>
+		<real>330546808.88431799</real>
 		<string>{0, 383}</string>
 		<string>{375, 0}</string>
 		<dict>
@@ -29009,7 +29009,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.90545201</real>
+		<real>330546808.88414699</real>
 		<string>{956, 2283}</string>
 		<string>{3140, 0}</string>
 		<dict>
@@ -46687,7 +46687,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.91203099</real>
+		<real>330546808.890764</real>
 		<string>{640, 1945}</string>
 		<string>{1092, 0}</string>
 		<dict>
@@ -86377,7 +86377,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.91011</real>
+		<real>330546808.88881397</real>
 		<string>{560, 1845}</string>
 		<string>{2686, 0}</string>
 		<string>CCActionInterval.h</string>
@@ -86617,7 +86617,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.909428</real>
+		<real>330546808.88824397</real>
 		<string>{1446, 907}</string>
 		<string>{1348, 0}</string>
 		<string>CCActionInterval.m</string>
@@ -90620,7 +90620,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.90806103</real>
+		<real>330546808.88609397</real>
 		<string>{0, 383}</string>
 		<string>{362, 0}</string>
 		<dict>
@@ -90872,7 +90872,7 @@
 				<integer>4730</integer>
 			</dict>
 		</dict>
-		<real>330546724.90728098</real>
+		<real>330546808.88550401</real>
 		<string>retry_button.png</string>
 		<dict>
 			<key>$class</key>
@@ -101555,7 +101555,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.91338903</real>
+		<real>330546808.89169002</real>
 		<string>{0, 805}</string>
 		<string>{615, 0}</string>
 		<dict>
@@ -101874,7 +101874,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.91322201</real>
+		<real>330546808.89152402</real>
 		<string>{0, 460}</string>
 		<string>{335, 0}</string>
 		<dict>
@@ -102766,7 +102766,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>AppDelegate.m</string>
+		<string>GameConfig.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -103281,7 +103281,7 @@
 				<integer>5360</integer>
 			</dict>
 		</dict>
-		<string>AppDelegate.m</string>
+		<string>GameConfig.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -103331,7 +103331,7 @@
 				<integer>129</integer>
 			</dict>
 			<key>NS.string</key>
-			<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/AppDelegate.m</string>
+			<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/GameConfig.h</string>
 		</dict>
 		<dict>
 			<key>$class</key>
@@ -103523,7 +103523,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>951</integer>
+					<integer>974</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -103666,9 +103666,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.91126603</real>
-		<string>{3549, 1520}</string>
-		<string>{4127, 0}</string>
+		<real>330546808.890019</real>
+		<string>{0, 1308}</string>
+		<string>{425, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -103686,7 +103686,7 @@
 				<integer>5384</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/AppDelegate.m</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/GameConfig.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -117601,7 +117601,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.91424203</real>
+		<real>330546808.89262599</real>
 		<string>{0, 383}</string>
 		<string>{281, 0}</string>
 		<dict>
@@ -117889,7 +117889,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.91409802</real>
+		<real>330546808.89246798</real>
 		<string>{34, 1524}</string>
 		<string>{1260, 0}</string>
 		<dict>
@@ -121278,7 +121278,7 @@
 				<integer>6276</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/AppDelegate.m</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/GameConfig.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121296,7 +121296,7 @@
 				<integer>6278</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/RootViewController.h</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/HelloWorldLayer.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121314,7 +121314,7 @@
 				<integer>6280</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/RootViewController.m</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/AppDelegate.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121332,7 +121332,7 @@
 				<integer>6282</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/GameConfig.h</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/LogoScene.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121350,7 +121350,7 @@
 				<integer>6284</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/HowtoScene.m</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/MainScene.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121368,7 +121368,7 @@
 				<integer>6286</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/MainScene.m</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/RootViewController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121386,7 +121386,7 @@
 				<integer>6288</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/HelloWorldLayer.h</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/RootViewController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121404,7 +121404,7 @@
 				<integer>6290</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/HelloWorldLayer.m</string>
+		<string>file://localhost/Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/HowtoScene.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121422,7 +121422,7 @@
 				<integer>6292</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster.xcodeproj/</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/HelloWorldLayer.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121440,7 +121440,7 @@
 				<integer>6294</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/Default@2x.png</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster.xcodeproj/</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121458,7 +121458,7 @@
 				<integer>6296</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/Default.png</string>
+		<string>file://localhost/Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/Default@2x.png</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121476,7 +121476,7 @@
 				<integer>6298</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/fps_images.png</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/Default.png</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121494,7 +121494,7 @@
 				<integer>6300</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/main/main_background-hd.png</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/fps_images.png</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121512,7 +121512,7 @@
 				<integer>6302</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/main/main_background.png</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/main/main_background-hd.png</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121530,7 +121530,7 @@
 				<integer>6304</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/result/return_button.png</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/main/main_background.png</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121548,7 +121548,7 @@
 				<integer>6306</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/result/retry_button-hd.png</string>
+		<string>file://localhost/Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/result/return_button.png</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121566,7 +121566,7 @@
 				<integer>6308</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/result/return_button-hd.png</string>
+		<string>file://localhost/Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/result/retry_button-hd.png</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121584,7 +121584,7 @@
 				<integer>6310</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/Info.plist</string>
+		<string>file://localhost/Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/result/return_button-hd.png</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121602,7 +121602,7 @@
 				<integer>6312</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/iTunesArtwork</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/Info.plist</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121620,7 +121620,7 @@
 				<integer>6314</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/title/logo.png</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/iTunesArtwork</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -121638,7 +121638,7 @@
 				<integer>6316</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/LogoScene.h</string>
+		<string>file://localhost/users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/image/title/logo.png</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -124196,7 +124196,7 @@
 				<integer>6492</integer>
 			</dict>
 		</dict>
-		<real>330546724.89916003</real>
+		<real>330546808.87618297</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -124246,7 +124246,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6302</integer>
+				<integer>6304</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -124481,7 +124481,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6296</integer>
+				<integer>6298</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -124657,7 +124657,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6304</integer>
+				<integer>6306</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -124774,7 +124774,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6300</integer>
+				<integer>6302</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -124832,7 +124832,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6294</integer>
+				<integer>6296</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -125421,7 +125421,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6298</integer>
+				<integer>6300</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -126008,7 +126008,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6306</integer>
+				<integer>6308</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -126243,7 +126243,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6312</integer>
+				<integer>6314</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -127016,7 +127016,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6314</integer>
+				<integer>6316</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -127426,7 +127426,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6308</integer>
+				<integer>6310</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -131828,7 +131828,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.89875603</real>
+		<real>330546808.87588</real>
 		<string>{34, 1524}</string>
 		<string>{1260, 0}</string>
 		<dict>
@@ -132729,9 +132729,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.89946997</real>
-		<string>{3549, 1520}</string>
-		<string>{4127, 0}</string>
+		<real>330546795.95863003</real>
+		<string>{1576, 2195}</string>
+		<string>{3025, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -132966,7 +132966,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330545456.44396698</real>
+		<real>330546773.75445801</real>
 		<string>{0, 219}</string>
 		<dict>
 			<key>$class</key>
@@ -133203,7 +133203,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.89892</real>
+		<real>330546808.87599999</real>
 		<string>{1446, 907}</string>
 		<string>{1348, 0}</string>
 		<dict>
@@ -133535,7 +133535,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.89929903</real>
+		<real>330546808.87628001</real>
 		<string>{956, 2283}</string>
 		<string>{3140, 0}</string>
 		<dict>
@@ -133868,9 +133868,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546670.55499798</real>
-		<string>{0, 1288}</string>
-		<string>{405, 0}</string>
+		<real>330546808.87637001</real>
+		<string>{0, 1308}</string>
+		<string>{425, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -134058,7 +134058,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.89983302</real>
+		<real>330546808.87647998</real>
 		<string>{640, 1945}</string>
 		<string>{1092, 0}</string>
 		<dict>
@@ -134532,7 +134532,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546631.36259401</real>
+		<real>330546796.15949202</real>
 		<string>{0, 1503}</string>
 		<dict>
 			<key>$class</key>
@@ -134674,8 +134674,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546641.97344899</real>
-		<string>{8573, 2138}</string>
+		<real>330546771.94335997</real>
+		<string>{8573, 2125}</string>
 		<string>{9760, 60}</string>
 		<dict>
 			<key>$class</key>
@@ -136566,7 +136566,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.89907497</real>
+		<real>330546808.876122</real>
 		<string>{0, 460}</string>
 		<string>{335, 0}</string>
 		<dict>
@@ -138342,7 +138342,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>6292</integer>
+				<integer>6294</integer>
 			</dict>
 			<key>selection</key>
 			<dict>
@@ -141456,7 +141456,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.90078199</real>
+		<real>330546808.87720501</real>
 		<string>{0, 383}</string>
 		<string>{281, 0}</string>
 		<dict>
@@ -141743,7 +141743,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330546724.90058601</real>
+		<real>330546808.87704003</real>
 		<string>{34, 1524}</string>
 		<string>{1260, 0}</string>
 		<dict>
