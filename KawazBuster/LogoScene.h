@@ -10,8 +10,6 @@
 #import "kwing.h"
 
 @interface LogoScene : KWScene {
-  CCSprite* logo_;
-  KWTimer* timer_;
 }
 
 @end

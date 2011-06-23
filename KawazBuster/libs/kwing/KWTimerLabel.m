@@ -1,22 +1,22 @@
 //
-//  GameTimer.m
+//  KWTimerLabel.m
 //  KawazBuster
 //
 //  Created by  on 11/06/21.
 //  Copyright 2011 Kawaz. All rights reserved.
 //
 
-#import "GameTimer.h"
+#import "KWTimerLabel.h"
 #import "GameConfig.h"
 
-@interface GameTimer()
+@interface KWTimerLabel()
 - (void)tick:(ccTime)dt;
 - (NSString*)humalize;
 - (Time)convertToTime:(NSTimeInterval)second;
 - (NSTimeInterval)convertToSecond:(Time)time;
 @end
 
-@implementation GameTimer
+@implementation KWTimerLabel
 @synthesize displayMiliSecond=displayMiliSecond_;
 
 - (id)init{

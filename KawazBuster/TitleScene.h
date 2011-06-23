@@ -13,7 +13,5 @@
   KWSprite* logo_;
 }
 
-- (void)tap;
-
 @end
 

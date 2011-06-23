@@ -8,7 +8,6 @@
 
 #import "kwing.h"
 #import "CDAudioManager.h"
-#import "GameTimer.h"
 
 @interface MainScene : KWScene{
   int score_;
@@ -17,7 +16,17 @@
   NSArray* targets_;
   CCLabelTTF* scoreLabel_;
   CCLabelTTF* highScoreLabel_;
-  GameTimer* timerLabel_;
+  KWTimerLabel* timerLabel_;
+  KWStateManager* stateMgr_;
 }
 
+@end
+
+@interface ReadyState : KWState
+@end
+
+@interface MainState : KWState
+@end
+
+@interface ResultState : KWState
 @end

@@ -10,7 +10,6 @@
 
 @interface KWStateManager()
 
-@property(readwrite, assign) KWState* runningState;
 @end
 
 @implementation KWStateManager
@@ -19,7 +18,6 @@
 - (id)init{
   self = [super init];
   if (self) {
-    // Initialization code here.
     runningState_ = nil;
     stateStack_ = [[NSMutableArray alloc] init];
   }
@@ -33,10 +31,17 @@
 }
 
 - (id)initWithInitialState:(KWState *)state{
+  self = [self initWithInitialState:state andArgs:[NSDictionary dictionary]];
+  return self;
+}
+
+- (id)initWithInitialState:(KWState *)state andArgs:(NSDictionary *)userData{
   self = [self init];
   if(self){
-    self.runningState = state;
+    [runningState_ release];
+    runningState_ = [state retain];
     [stateStack_ addObject:state];
+    [state setUp:userData];
   }
   return self;
 }
@@ -46,7 +51,8 @@
 }
 
 - (void)pushState:(KWState *)state andArgs:(NSDictionary *)userData{
-  self.runningState = state;
+  [runningState_ release];
+  runningState_ = [state retain];
   [stateStack_ addObject:state];
   [state setUp:userData];
 }
@@ -57,7 +63,8 @@
 
 - (void)replaceState:(KWState *)state andArgs:(NSDictionary *)userData{
   [runningState_ tearDown];
-  self.runningState = state;
+  [runningState_ release];
+  runningState_ = [state retain];
   [stateStack_ removeLastObject];
   [stateStack_ addObject:state];
   [runningState_ setUp:userData];
@@ -66,7 +73,8 @@
 - (void)popState{
   [runningState_ tearDown];
   [stateStack_ removeLastObject];
-  self.runningState = [stateStack_ lastObject];
+  [runningState_ release];
+  runningState_ = [[stateStack_ lastObject] retain];
 }
 
 @end

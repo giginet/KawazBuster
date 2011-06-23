@@ -8,7 +8,6 @@
 
 #import "MainScene.h"
 #import "KawazTan.h"
-#import "KWMusicManager.h"
 #import "GameConfig.h"
 #import "SimpleAudioEngine.h"
 #import <AudioToolbox/AudioServices.h>
@@ -32,6 +31,7 @@
     score_ = 0;
     active_ = NO;
     NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+    stateMgr_ = [[KWStateManager alloc] initWithInitialState:[ReadyState state]];
     highScore_ =  [ud integerForKey:@"highScore"];
     KWSprite* bg0 = [KWSprite spriteWithFile:@"main_background.png"];
     KWSprite* bg1 = [KWSprite spriteWithFile:@"main_layer0.png"];
@@ -64,7 +64,7 @@
     highScoreLabel_ = [[CCLabelTTF labelWithString:[[NSNumber numberWithInt:highScore_] stringValue] 
                                          fontName:@"Marker Felt" 
                                          fontSize:24] retain];
-    timerLabel_ = [[GameTimer labelWithString:@"0"
+    timerLabel_ = [[KWTimerLabel labelWithString:@"0"
                                       fontName:@"Marker Felt" 
                                       fontSize:24] retain];
     [timerLabel_ setTime:0 minute:1 second:0];
@@ -94,6 +94,7 @@
 - (void)dealloc{
   [targets_ release];
   [scoreLabel_ release];
+  [timerLabel_ release];
   [super dealloc];
 }
 

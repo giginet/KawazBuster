@@ -6,7 +6,8 @@
 //  Copyright 2011 Kawaz. All rights reserved.
 //
 
-#import "kwing.h"
+#import "cocos2d.h"
+#import "KWSingleton.h"
 #import "CDAudioManager.h"
 
 @interface KWMusicManager : KWSingleton{

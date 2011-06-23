@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		073524F613B0B43A007B8CF8 /* GameTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 073524F513B0B439007B8CF8 /* GameTimer.m */; };
 		073524FC13B0EA5E007B8CF8 /* title.caf in Resources */ = {isa = PBXBuildFile; fileRef = 073524FB13B0EA5E007B8CF8 /* title.caf */; };
 		073524FF13B0F3B4007B8CF8 /* start.caf in Resources */ = {isa = PBXBuildFile; fileRef = 073524FE13B0F3B4007B8CF8 /* start.caf */; };
 		0739340E13A8AEBB00CAC438 /* KawazTan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0739340D13A8AEBA00CAC438 /* KawazTan.m */; };
@@ -38,6 +37,9 @@
 		0766E9E313B2813E0007E7F3 /* HowtoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766E9E213B2813E0007E7F3 /* HowtoScene.m */; };
 		0766EA5A13B298CE0007E7F3 /* KWState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766EA5913B298CD0007E7F3 /* KWState.m */; };
 		0766EA5D13B2990C0007E7F3 /* KWStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766EA5C13B2990A0007E7F3 /* KWStateManager.m */; };
+		0766EA6013B35AEE0007E7F3 /* KWTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0766EA5F13B35AEC0007E7F3 /* KWTimerLabel.m */; };
+		0766EA6713B35D370007E7F3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766EA6513B35D370007E7F3 /* Default.png */; };
+		0766EA6813B35D370007E7F3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766EA6613B35D370007E7F3 /* Default@2x.png */; };
 		076A4E3E13A770AE00C04B06 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A4E3D13A770AE00C04B06 /* MainScene.m */; };
 		076A4E4513A7775F00C04B06 /* main_background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E3F13A7775C00C04B06 /* main_background-hd.png */; };
 		076A4E4613A7775F00C04B06 /* main_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E4013A7775D00C04B06 /* main_background.png */; };
@@ -184,8 +186,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		073524F413B0B439007B8CF8 /* GameTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTimer.h; sourceTree = "<group>"; };
-		073524F513B0B439007B8CF8 /* GameTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTimer.m; sourceTree = "<group>"; };
 		073524FB13B0EA5E007B8CF8 /* title.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = title.caf; sourceTree = "<group>"; };
 		073524FE13B0F3B4007B8CF8 /* start.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = start.caf; sourceTree = "<group>"; };
 		0739340C13A8AEBA00CAC438 /* KawazTan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KawazTan.h; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/KawazTan.h; sourceTree = "<group>"; };
@@ -229,6 +229,10 @@
 		0766EA5913B298CD0007E7F3 /* KWState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWState.m; path = /Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/libs/kwing/KWState.m; sourceTree = "<absolute>"; };
 		0766EA5B13B299090007E7F3 /* KWStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWStateManager.h; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/libs/kwing/KWStateManager.h; sourceTree = "<group>"; };
 		0766EA5C13B2990A0007E7F3 /* KWStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWStateManager.m; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/libs/kwing/KWStateManager.m; sourceTree = "<group>"; };
+		0766EA5E13B35AEB0007E7F3 /* KWTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KWTimerLabel.h; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/libs/kwing/KWTimerLabel.h; sourceTree = "<group>"; };
+		0766EA5F13B35AEC0007E7F3 /* KWTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KWTimerLabel.m; path = ../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/libs/kwing/KWTimerLabel.m; sourceTree = "<group>"; };
+		0766EA6513B35D370007E7F3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = /Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/Default.png; sourceTree = "<absolute>"; };
+		0766EA6613B35D370007E7F3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../../../../Users/giginet/Develop/iPhone/KawazBuster/KawazBuster/Resources/Default@2x.png"; sourceTree = "<group>"; };
 		076A4E3C13A770AD00C04B06 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
 		076A4E3D13A770AE00C04B06 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
 		076A4E3F13A7775C00C04B06 /* main_background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "main_background-hd.png"; path = "Resources/image/main/main_background-hd.png"; sourceTree = "<group>"; };
@@ -613,6 +617,8 @@
 		076A4E4B13A7776700C04B06 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				0766EA6513B35D370007E7F3 /* Default.png */,
+				0766EA6613B35D370007E7F3 /* Default@2x.png */,
 				076A4E6D13A77D0600C04B06 /* kawaz */,
 				076A4E4C13A7777400C04B06 /* background */,
 			);
@@ -696,8 +702,6 @@
 				07FC9138138EAEE8000D5ADB /* HelloWorldLayer.h */,
 				07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */,
 				07FC913B138EAEE8000D5ADB /* GameConfig.h */,
-				073524F413B0B439007B8CF8 /* GameTimer.h */,
-				073524F513B0B439007B8CF8 /* GameTimer.m */,
 				07FC8FE1138EAEE5000D5ADB /* Resources */,
 				07FC8FF5138EAEE5000D5ADB /* libs */,
 				07FC912E138EAEE8000D5ADB /* Supporting Files */,
@@ -1035,6 +1039,8 @@
 		07FC9146138EB665000D5ADB /* Kwing */ = {
 			isa = PBXGroup;
 			children = (
+				0766EA5E13B35AEB0007E7F3 /* KWTimerLabel.h */,
+				0766EA5F13B35AEC0007E7F3 /* KWTimerLabel.m */,
 				0766EA5813B298CC0007E7F3 /* KWState.h */,
 				0766EA5913B298CD0007E7F3 /* KWState.m */,
 				0766EA5B13B299090007E7F3 /* KWStateManager.h */,
@@ -1167,6 +1173,8 @@
 				0766E9DD13B281020007E7F3 /* howto0.png in Resources */,
 				0766E9DE13B281020007E7F3 /* howto1-hd.png in Resources */,
 				0766E9DF13B281020007E7F3 /* howto1.png in Resources */,
+				0766EA6713B35D370007E7F3 /* Default.png in Resources */,
+				0766EA6813B35D370007E7F3 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1286,10 +1294,10 @@
 				076A4E3E13A770AE00C04B06 /* MainScene.m in Sources */,
 				0739340E13A8AEBB00CAC438 /* KawazTan.m in Sources */,
 				07F7BDA213B06EF200BF1366 /* KWMusicManager.m in Sources */,
-				073524F613B0B43A007B8CF8 /* GameTimer.m in Sources */,
 				0766E9E313B2813E0007E7F3 /* HowtoScene.m in Sources */,
 				0766EA5A13B298CE0007E7F3 /* KWState.m in Sources */,
 				0766EA5D13B2990C0007E7F3 /* KWStateManager.m in Sources */,
+				0766EA6013B35AEE0007E7F3 /* KWTimerLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,6 @@
 //  Copyright 2011 Kawaz. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "KWState.h"
 
 @interface KWStateManager : NSObject{
@@ -15,6 +14,7 @@
 }
 
 - (id)initWithInitialState:(KWState*)state;
+- (id)initWithInitialState:(KWState *)state andArgs:(NSDictionary*)userData;
 
 - (void)pushState:(KWState*)state;
 - (void)pushState:(KWState*)state andArgs:(NSDictionary*)userData;
