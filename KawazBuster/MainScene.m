@@ -36,6 +36,7 @@
     // メンバ変数の初期化
     score_ = 0;
     active_ = NO;
+    hurryUp_ = NO;
     // ハイスコアの読み込み
     NSUserDefaults* ud = [NSUserDefaults standardUserDefaults]; // iOSの保存データを読み込む
     highScore_ =  [ud integerForKey:@"highScore"]; // iOS中から"highScore"というデータを取ってくる
@@ -72,7 +73,7 @@
     }
     targets_ = [[NSArray alloc] initWithArray:targets];
     //　スコアラベルの初期化
-    [timerLabel_ setTime:0 minute:0 second:5];
+    [timerLabel_ setTime:0 minute:1 second:0];
     CCLabelTTF* scoreLabel = [CCLabelTTF labelWithString:@"Score" fontName:@"Marker Felt" fontSize:24];
     CCLabelTTF* highScoreLabel = [CCLabelTTF labelWithString:@"HighScore" fontName:@"Marker Felt" fontSize:24];
     CCLabelTTF* timeLabel = [CCLabelTTF labelWithString:@"Time" fontName:@"Marker Felt" fontSize:24];
@@ -88,8 +89,8 @@
     [self addChild:highScoreLabel_];
     [self addChild:timeLabel];
     [self addChild:timerLabel_];
-    //2秒後に音楽を鳴らす
-    [self schedule:@selector(playMusic) interval:2.0];
+    //1秒後に音楽を鳴らす
+    [self schedule:@selector(playMusic) interval:1.0];
     // タイマー終了時にendGameを実行させる
     [timerLabel_ setTimerCompletionListener:self selector:@selector(endGame)];
     self.isTouchEnabled = YES;
@@ -100,15 +101,19 @@
 - (void)dealloc{
   [targets_ release];
   [scoreLabel_ release];
+  [highScoreLabel_ release];
   [timerLabel_ release];
   [super dealloc];
 }
 
 - (void)update:(ccTime)dt{
   [super update:dt];
-  int rate = [timerLabel_ leaveSecond] <= 20 ? 10 : 40;
+  int rate = hurryUp_ ? 10 : 40;
   if(active_ && rand()%rate == 0){
     [self popTarget];
+  }
+  if([timerLabel_ leaveSecond] <= HURRY_UP_TIME && !hurryUp_){
+    [self hurryUp];
   }
 }
 
@@ -116,31 +121,70 @@
   KWMusicManager* mm = [KWMusicManager sharedManager];
   [mm setIntroMusicCompletionListener:self selector:@selector(startGame)];
   [mm playMusic:@"bgm.caf" intro:@"bgm_int.caf" loop:YES];
-  //[self schedule:@selector(hurryUp) interval:40.0];
   [self unschedule:@selector(playMusic)];
+  KWSprite* ready = [KWSprite spriteWithFile:@"ready.png"];
+  ready.scale = 0;
+  ready.position = ccp(winSize_.width/2, winSize_.height/2);
+  id appear = [CCEaseExponentialIn actionWithAction:[CCScaleTo actionWithDuration:0.5f scale:1.0]];
+  [ready runAction:appear];
+  [self addChild:ready z:5000 tag:1];
 }
 
 - (void)startGame{
+  KWSprite* ready = (KWSprite*)[self getChildByTag:1];
+  KWSprite* go = [KWSprite spriteWithFile:@"go.png"];
+  go.scale = 0;
+  go.position = ccp(winSize_.width/2, winSize_.height/2);
+  id appear = [CCEaseExponentialIn actionWithAction:[CCScaleTo actionWithDuration:0.5f scale:1.0]];
+  id wait = [CCMoveBy actionWithDuration:0.5];
+  id disapper = [CCEaseExponentialOut actionWithAction:[CCScaleTo actionWithDuration:0.5f scale:0]];
+  id spin = [CCSpawn actionOne:[CCRotateBy actionWithDuration:0.5 angle:720]
+                               two:[CCMoveTo actionWithDuration:0.5 position:ccp(winSize_.width*1.5, winSize_.height*1.5)]];
+  id suicide = [CCCallBlockN actionWithBlock:
+                ^(CCNode *n) {
+                  [self removeChild:n cleanup:YES];
+                }];
+  CCSequence* seq = [CCSequence actions:appear, wait, spin, suicide, nil];
+  [ready runAction:[CCSequence actions:disapper, suicide, nil]];
+  [go runAction:seq];
+  [self addChild:go z:5000 tag:2];
   active_ = YES;
   [timerLabel_ play];
   [self unschedule:@selector(startGame)];
 }
 
 - (void)hurryUp{
-  [self unschedule:@selector(hurryUp)];
-  KWMusicManager* mm = [KWMusicManager sharedManager];
-  [mm changeMusic:@"bgm_tempo_up.caf" intro:@"bgm_int_tempo_up.caf" loop:YES fadeout:1.0];
+  //hurryUp_ = YES;
+  //KWMusicManager* mm = [KWMusicManager sharedManager];
+  //[mm changeMusic:@"hurry.caf" intro:@"hurry_int.caf" loop:YES fadeout:1.0];
 }
 
 - (void)endGame{
   SimpleAudioEngine* ae = [SimpleAudioEngine sharedEngine];
   [ae playEffect:@"time_up.caf"];
-  active_ = NO;
+  KWSprite* finish = [KWSprite spriteWithFile:@"finish.png"];
+  finish.scale = 0;
+  finish.position = ccp(winSize_.width/2, winSize_.height/2);
+  id appear = [CCEaseExponentialIn actionWithAction:[CCScaleTo actionWithDuration:0.5f scale:1.0]];
+  id wait = [CCMoveBy actionWithDuration:1.0f];
+  id disapper = [CCEaseExponentialOut actionWithAction:[CCScaleTo actionWithDuration:0.5f scale:0]];
+  id suicide = [CCCallBlockN actionWithBlock:
+                ^(CCNode *n) {
+                  [n removeChild:self cleanup:YES];
+                }];
+  CCSequence* seq = [CCSequence actions:appear, wait, disapper, suicide, nil];
+  [finish runAction:seq];
+  [self addChild:finish z:5000];
   KWMusicManager* mm = [KWMusicManager sharedManager];
-  //[mm changeMusic:@"game_over.caf" intro:nil loop:NO fadeout:2.0];
-  [self schedule:@selector(showResult) interval:3.0f];
-  [self unschedule:@selector(endGame)];
-  [mm playMusic:@"game_over.caf" loop:NO];
+  [mm fadeout:2.0f];
+  active_ = NO;
+  [self runAction:[CCSequence actions:
+                   [CCMoveBy actionWithDuration:2],
+                   [CCCallBlock actionWithBlock:^{
+    [self schedule:@selector(showResult) interval:4.0f];
+    [mm playMusic:@"game_over.caf" loop:NO];  
+  }],
+                   nil]];
 }
 
 - (void)showResult{
@@ -157,12 +201,27 @@
   [menu alignItemsHorizontally]; // メニューを横並びにする
   [self addChild:menu z:5000];
   [self unschedule:@selector(showResult)];
+  // ハイスコア判定
+  if(score_ > highScore_){
+    KWMusicManager* mm = [KWMusicManager sharedManager];
+    [mm playMusic:@"high_score.caf" loop:NO];
+    highScore_ = score_;
+    [highScoreLabel_ setString:[[NSNumber numberWithInt:highScore_] stringValue]];
+    NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+    [ud setInteger:highScore_ forKey:@"highScore"];
+  }
 }
 
 - (void)popTarget{
   // ターゲット（かわずたん）を沸かせる処理
   int n = rand()%[targets_ count];
-  [(KawazTan*)[targets_ objectAtIndex:n] start];
+  ccTime wait = 1.0;
+  if(hurryUp_){
+    wait = [timerLabel_ leaveSecond] * 0.008 + 0.5;
+  }else{
+    wait = [timerLabel_ leaveSecond] * 0.01 + 0.2;
+  }
+  [(KawazTan*)[targets_ objectAtIndex:n] start:wait];
 }
 
 - (void)shakeScreen{

@@ -13,6 +13,7 @@
   int score_;
   int highScore_;
   BOOL active_;
+  BOOL hurryUp_;
   NSArray* targets_;
   CCLabelTTF* scoreLabel_;
   CCLabelTTF* highScoreLabel_;

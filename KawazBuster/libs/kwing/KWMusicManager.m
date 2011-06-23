@@ -40,6 +40,9 @@
 }
 
 - (void)playMusic:(NSString *)file intro:(NSString *)introFile loop:(BOOL)loop{
+  CCScheduler* ss = [CCScheduler sharedScheduler];
+  [ss unscheduleSelector:@selector(playNextMusic) forTarget:self];
+  [ss unscheduleSelector:@selector(volumeDown:) forTarget:self];
   CDAudioManager* am = [CDAudioManager sharedManager];
   loopMusic_ = [[NSString alloc] initWithString:file];
   loop_= loop;

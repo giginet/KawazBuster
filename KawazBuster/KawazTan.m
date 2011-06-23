@@ -65,17 +65,18 @@
   return state_ == KawazTanStateNormal || state_ == KawazTanStateInvinsible || state_ == KawazTanStateDamaged;
 }
 
-- (BOOL)start{
+- (BOOL)start:(ccTime)waitTime{
   if(![self isMoving]){
+    if (type_ == KawazTanTypeBomb) waitTime *= 1.5;
     state_ = KawazTanStateMoving;
     CGPoint point = self.position;
-    CCFiniteTimeAction* go = [CCEaseOut actionWithAction:[CCMoveTo actionWithDuration:0.5f 
+    CCFiniteTimeAction* go = [CCEaseOut actionWithAction:[CCMoveTo actionWithDuration:0.25f 
                                                                              position:ccp(point.x, point.y + contentSize_.height*0.8)] 
                                                     rate:0.5];
     CCFiniteTimeAction* normal = [CCCallFunc actionWithTarget:self selector:@selector(toNormal)];
-    CCFiniteTimeAction* wait = [CCMoveBy actionWithDuration:1.0f position:CGPointMake(0, 0)];
+    CCFiniteTimeAction* wait = [CCMoveBy actionWithDuration:waitTime];
     CCFiniteTimeAction* move = [CCCallFunc actionWithTarget:self selector:@selector(toMoving)];
-    CCFiniteTimeAction* back = [CCEaseIn actionWithAction:[CCMoveTo actionWithDuration:0.5f 
+    CCFiniteTimeAction* back = [CCEaseIn actionWithAction:[CCMoveTo actionWithDuration:0.25f 
                                                                               position:ccp(point.x, point.y)] 
                                                      rate:0.5];
     CCFiniteTimeAction* change = [CCCallFunc actionWithTarget:self selector:@selector(onBacked)];

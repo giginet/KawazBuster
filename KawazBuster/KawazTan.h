@@ -33,7 +33,7 @@ typedef enum{
 }
 
 - (id)initWithPosition:(CGPoint)point;
-- (BOOL)start;
+- (BOOL)start:(ccTime)waitTime;
 - (BOOL)isMoving;
 - (BOOL)tap;
 - (BOOL)canTouch;
