@@ -56,6 +56,7 @@
     [am playBackgroundMusic:file loop:loop];
   }
   self.music.volume = 1.0;
+  [self setIntroMusicCompletionListener:nil selector:nil];
 }
 
 - (void)stopMusic{
@@ -83,7 +84,7 @@
   [am setBackgroundMusicCompletionListener:nil selector:nil];
   if (introMusicCompletionSelector_ != nil) {
 		[introMusicCompletionListener_ performSelector:introMusicCompletionSelector_];
-	}	
+	}
 }
 
 - (void)playNextMusic{

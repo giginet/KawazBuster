@@ -6,6 +6,8 @@
 //  Copyright 2011 Kawaz. All rights reserved.
 //
 
+#import "SimpleAudioEngine.h"
+
 #import "HowtoScene.h"
 #import "GameConfig.h"
 
@@ -41,6 +43,7 @@
 }
 
 - (void)pressBackButton:(id)sender{
+  [[SimpleAudioEngine sharedEngine] playEffect:@"pico.caf"];
   [[CCDirector sharedDirector] popScene];
 }
 

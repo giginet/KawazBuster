@@ -6,11 +6,10 @@
 //  Copyright 2011 Kawaz. All rights reserved.
 //
 
-// When you import this file, you import all the cocos2d classes
 #import "kwing.h"
 
 @interface TitleScene : KWScene{
-  KWSprite* logo_;
+  BOOL played_;     // タイトル音楽再生済みかどうか
 }
 
 @end

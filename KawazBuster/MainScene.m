@@ -119,8 +119,8 @@
 
 - (void)playMusic{
   KWMusicManager* mm = [KWMusicManager sharedManager];
-  [mm setIntroMusicCompletionListener:self selector:@selector(startGame)];
   [mm playMusic:@"bgm.caf" intro:@"bgm_int.caf" loop:YES];
+  [mm setIntroMusicCompletionListener:self selector:@selector(startGame)];
   [self unschedule:@selector(playMusic)];
   KWSprite* ready = [KWSprite spriteWithFile:@"ready.png"];
   ready.scale = 0;
@@ -135,14 +135,14 @@
   KWSprite* go = [KWSprite spriteWithFile:@"go.png"];
   go.scale = 0;
   go.position = ccp(winSize_.width/2, winSize_.height/2);
-  id appear = [CCEaseExponentialIn actionWithAction:[CCScaleTo actionWithDuration:0.5f scale:1.0]];
+  id appear = [CCEaseExponentialIn actionWithAction:[CCScaleTo actionWithDuration:0.25f scale:1.0]];
   id wait = [CCMoveBy actionWithDuration:0.5];
-  id disapper = [CCEaseExponentialOut actionWithAction:[CCScaleTo actionWithDuration:0.5f scale:0]];
+  id disapper = [CCEaseExponentialOut actionWithAction:[CCScaleTo actionWithDuration:0.25f scale:0]];
   id spin = [CCSpawn actionOne:[CCRotateBy actionWithDuration:0.5 angle:720]
                                two:[CCMoveTo actionWithDuration:0.5 position:ccp(winSize_.width*1.5, winSize_.height*1.5)]];
   id suicide = [CCCallBlockN actionWithBlock:
                 ^(CCNode *n) {
-                  [self removeChild:n cleanup:YES];
+                  [n removeFromParentAndCleanup:YES];
                 }];
   CCSequence* seq = [CCSequence actions:appear, wait, spin, suicide, nil];
   [ready runAction:[CCSequence actions:disapper, suicide, nil]];
@@ -154,9 +154,9 @@
 }
 
 - (void)hurryUp{
-  //hurryUp_ = YES;
-  //KWMusicManager* mm = [KWMusicManager sharedManager];
-  //[mm changeMusic:@"hurry.caf" intro:@"hurry_int.caf" loop:YES fadeout:1.0];
+  hurryUp_ = YES;
+  KWMusicManager* mm = [KWMusicManager sharedManager];
+  [mm playMusic:@"hurry.caf" intro:@"hurry_int.caf" loop:YES];
 }
 
 - (void)endGame{
@@ -165,12 +165,13 @@
   KWSprite* finish = [KWSprite spriteWithFile:@"finish.png"];
   finish.scale = 0;
   finish.position = ccp(winSize_.width/2, winSize_.height/2);
-  id appear = [CCEaseExponentialIn actionWithAction:[CCScaleTo actionWithDuration:0.5f scale:1.0]];
+  self.position = ccp(0, 0); // たまに爆弾を使った後の位置が補正されないので、ここで補正してやる
+  id appear = [CCEaseExponentialIn actionWithAction:[CCScaleTo actionWithDuration:0.25f scale:1.0]];
   id wait = [CCMoveBy actionWithDuration:1.0f];
-  id disapper = [CCEaseExponentialOut actionWithAction:[CCScaleTo actionWithDuration:0.5f scale:0]];
+  id disapper = [CCEaseExponentialOut actionWithAction:[CCScaleTo actionWithDuration:0.25f scale:0]];
   id suicide = [CCCallBlockN actionWithBlock:
                 ^(CCNode *n) {
-                  [n removeChild:self cleanup:YES];
+                  [n removeFromParentAndCleanup:YES];
                 }];
   CCSequence* seq = [CCSequence actions:appear, wait, disapper, suicide, nil];
   [finish runAction:seq];
@@ -189,15 +190,15 @@
 
 - (void)showResult{
   CCMenuItemImage* retry = [CCMenuItemImage itemFromNormalImage:@"retry_button.png" // 通常時の画像 
-                                                  selectedImage:@"retry_button.png" // 押したときの画像
+                                                  selectedImage:@"retry_button_selected.png" // 押したときの画像
                                                          target:self         // 押したときに呼び出すメソッドがどこにあるか
                                                        selector:@selector(pressRetryButton:)]; // 押したときに呼び出すメソッド
   CCMenuItemImage* title  = [CCMenuItemImage itemFromNormalImage:@"return_button.png" 
-                                                   selectedImage:@"return_button.png" 
+                                                   selectedImage:@"return_button_selected.png" 
                                                           target:self 
                                                         selector:@selector(pressReturnButton:)];
   CCMenu* menu = [CCMenu menuWithItems:retry, title, nil]; // 生成した各MenuItemからメニューを作る
-  menu.position = ccp(winSize_.width/2, 40); // メニューの中心位置を設定
+  menu.position = ccp(winSize_.width/2, 50); // メニューの中心位置を設定
   [menu alignItemsHorizontally]; // メニューを横並びにする
   [self addChild:menu z:5000];
   [self unschedule:@selector(showResult)];
@@ -246,11 +247,13 @@
 }
 
 - (void)pressRetryButton:(id)sender{
+  [[SimpleAudioEngine sharedEngine] playEffect:@"pico.caf"];
   CCTransitionFade* transition = [CCTransitionCrossFade transitionWithDuration:0.5f scene:[MainScene scene]];
   [[CCDirector sharedDirector] replaceScene:transition];
 }
 
 - (void)pressReturnButton:(id)sender{
+  [[SimpleAudioEngine sharedEngine] playEffect:@"pico.caf"];
   CCTransitionFade* transition = [CCTransitionCrossFade transitionWithDuration:0.5f scene:[TitleScene scene]];
   [[CCDirector sharedDirector] replaceScene:transition];
 }
