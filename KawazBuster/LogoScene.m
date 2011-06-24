@@ -32,7 +32,8 @@
     id fadeIn = [CCFadeIn actionWithDuration:2];
     id wait = [CCMoveBy actionWithDuration:2];
     id fadeOut = [CCFadeOut actionWithDuration:2];
-    id toTitle = [CCCallFunc actionWithTarget:self selector:@selector(goToTitle)];
+    id toTitle = [CCCallFunc actionWithTarget:self 
+                                     selector:@selector(goToTitle)];
     CCSequence* seq = [CCSequence actions:fadeIn, wait, fadeOut, toTitle, nil]; // Sequenceの作成
     [logo runAction:seq]; // ロゴにSequenceを適用
     [self addChild:logo]; // ロゴをSceneに追加
@@ -61,9 +62,10 @@
 }
 
 - (void)goToTitle{
-  // タイトル画面に移動するメソッド（プライベート）
+  // タイトル画面に移動するメソッド
   CCScene* titleScene = [TitleScene scene]; // タイトルシーンを生成
-  CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:0.5f scene:titleScene]; // トランジションの設定。0.5秒でフェードする。
+  CCTransitionFade* transition = [CCTransitionFade transitionWithDuration:0.5f 
+                                                                    scene:titleScene]; // トランジションの設定。0.5秒でフェードする。
   [[CCDirector sharedDirector] replaceScene:transition]; // シーンを置き換える
 }
 

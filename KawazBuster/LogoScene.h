@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "kwing.h"
 
+// 最初のKawazロゴのシーン
+
 @interface LogoScene : KWScene {
 }
 

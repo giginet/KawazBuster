@@ -8,6 +8,8 @@
 
 #import "kwing.h"
 
+// タイトル画面シーン
+
 @interface TitleScene : KWScene{
   BOOL played_;     // タイトル音楽再生済みかどうか
 }

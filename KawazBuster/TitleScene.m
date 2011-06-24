@@ -69,6 +69,9 @@
 }
 
 - (void)pressExitButton:(id)sender{
+  // "おわる"ボタンを押したときの処理
+  // いろいろ調べた結果、iOS3.0以降では、プログラムからアプリを終了できない様子
+  // というわけで何もしない
 }
 
 - (void)pressHowtoButton:(id)sender{
@@ -78,6 +81,7 @@
 }
 
 - (void)onEnterTransitionDidFinish{
+  // トランジションが終了したときに呼び出されるメソッド
   // タイトル音楽の再生
   if(!played_){
     KWMusicManager* mm = [KWMusicManager sharedManager];
@@ -86,6 +90,4 @@
   }
 }
 
-- (void) dealloc{
-}
 @end

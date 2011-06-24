@@ -9,7 +9,7 @@
 #import "kwing.h"
 #import "CDAudioManager.h"
 
-// ゲーム本編を管理するシーン
+// ゲーム本編シーン
 
 @interface MainScene : KWScene{
   int score_;                   // 現在のスコア

@@ -14,7 +14,7 @@
 @class MainScene;
 
 @interface HowtoScene()
-- (void)pressBackButton:(id)sender;
+- (void)pressBackButton:(id)sender; // おーけーボタンを押したとき
 @end
 
 @implementation HowtoScene
@@ -24,6 +24,7 @@
   if (self) {
     KWSprite* bg = [KWSprite spriteWithFile:@"title_background.png"];
     CCLayerColor* layer = [CCLayerColor layerWithColor:ccc4(128, 128, 128, 200)];
+    // KWAnimationで簡単にアニメーションを作成。ドキュメントは後で書く
     KWSprite* howto = [KWAnimation spriteWithFiles:[NSArray arrayWithObjects:@"howto0.png", @"howto1.png", nil] andAPS:15.0/FPS];
     bg.position = ccp(winSize_.width/2, winSize_.height/2);
     howto.position = ccp(winSize_.width/2, winSize_.height/2);
@@ -43,6 +44,7 @@
 }
 
 - (void)pressBackButton:(id)sender{
+  // おーけーボタンを押したとき
   [[SimpleAudioEngine sharedEngine] playEffect:@"pico.caf"];
   [[CCDirector sharedDirector] popScene];
 }

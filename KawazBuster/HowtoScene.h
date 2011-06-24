@@ -8,6 +8,8 @@
 
 #import "kwing.h"
 
+// 遊び方シーン
+
 @interface HowtoScene : KWScene
 
 @end
