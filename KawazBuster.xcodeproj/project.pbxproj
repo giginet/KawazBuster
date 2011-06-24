@@ -206,7 +206,6 @@
 		07FC9131138EAEE8000D5ADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9130138EAEE8000D5ADB /* main.m */; };
 		07FC9134138EAEE8000D5ADB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9133138EAEE8000D5ADB /* AppDelegate.m */; };
 		07FC9137138EAEE8000D5ADB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9136138EAEE8000D5ADB /* RootViewController.m */; };
-		07FC913A138EAEE8000D5ADB /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -543,8 +542,6 @@
 		07FC9133138EAEE8000D5ADB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		07FC9135138EAEE8000D5ADB /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		07FC9136138EAEE8000D5ADB /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		07FC9138138EAEE8000D5ADB /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		07FC913B138EAEE8000D5ADB /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -781,8 +778,6 @@
 				07FC9133138EAEE8000D5ADB /* AppDelegate.m */,
 				07FC9135138EAEE8000D5ADB /* RootViewController.h */,
 				07FC9136138EAEE8000D5ADB /* RootViewController.m */,
-				07FC9138138EAEE8000D5ADB /* HelloWorldLayer.h */,
-				07FC9139138EAEE8000D5ADB /* HelloWorldLayer.m */,
 				07FC913B138EAEE8000D5ADB /* GameConfig.h */,
 				079D7B9B13B3CB5E004D9704 /* KawazTan.h */,
 				079D7B9C13B3CB5E004D9704 /* KawazTan.m */,
@@ -1394,7 +1389,6 @@
 				07FC9131138EAEE8000D5ADB /* main.m in Sources */,
 				07FC9134138EAEE8000D5ADB /* AppDelegate.m in Sources */,
 				07FC9137138EAEE8000D5ADB /* RootViewController.m in Sources */,
-				07FC913A138EAEE8000D5ADB /* HelloWorldLayer.m in Sources */,
 				074CB03713A7539A006FB6EC /* KWAnimation.m in Sources */,
 				074CB03813A7539A006FB6EC /* KWScene.m in Sources */,
 				074CB03913A7539A006FB6EC /* KWSingleton.m in Sources */,

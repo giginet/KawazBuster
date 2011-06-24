@@ -18,8 +18,7 @@
 
 @synthesize window;
 
-- (void) removeStartupFlicker
-{
+- (void) removeStartupFlicker{
 	//
 	// THIS CODE REMOVES THE STARTUP FLICKER
 	//
@@ -39,6 +38,7 @@
 	
 #endif // GAME_AUTOROTATION == kGameAutorotationUIViewController	
 }
+
 - (void) applicationDidFinishLaunching:(UIApplication*)application{
 	// Init the window
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -93,12 +93,15 @@
 	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
 #endif
 	
-	[director setAnimationInterval:1.0/FPS];
-	[director setDisplayFPS:SHOW_FPS];
+	[director setAnimationInterval:1.0/FPS]; // FPSの設定
+	[director setDisplayFPS:SHOW_FPS]; // FPSの表示切り替え
+  
   // マルチタッチを有効にする
   [glView setMultipleTouchEnabled:YES];
-  // initialize rand
+  
+  // 乱数種の初期化
   srand(time(NULL));
+  
   //ハイスコアを初期化する
   NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
   [ud registerDefaults:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:INITIAL_HIGHSCORE] forKey:@"highScore"]];

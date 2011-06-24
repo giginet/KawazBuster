@@ -18,16 +18,16 @@
 #define kGameAutorotationNone 0
 #define kGameAutorotationCCDirector 1
 #define kGameAutorotationUIViewController 2
-#define FPS 60
-#define SKIPTITLE NO
-#define SHOW_FPS NO
+#define FPS 60 // FPS
+#define SKIPTITLE NO // タイトル画面をスキップするか（デバッグ用）
+#define SHOW_FPS NO // FPSを表示するか（デバッグ用）
 
 /* Kawaz-tan tataki! Local Settings */
-#define BOMB_RATE 0.2
-#define KAWAZTAN_SCORE 100
-#define BOMB_SCORE -500
-#define INITIAL_HIGHSCORE 2000
-#define HURRY_UP_TIME 20
+#define BOMB_RATE 0.2 // 爆弾の出現率
+#define KAWAZTAN_SCORE 100 // かわずたんを叩いたときのスコア
+#define BOMB_SCORE -500 // 爆弾を叩いたときのスコア
+#define INITIAL_HIGHSCORE 2000 // 初期ハイスコア
+#define HURRY_UP_TIME 20 // 残り何秒で急げ！モードになるか
 
 //
 // Define here the type of autorotation that you want for your game
