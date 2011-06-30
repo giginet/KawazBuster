@@ -11,6 +11,7 @@
 #import "TitleScene.h"
 #import "MainScene.h"
 #import "HowtoScene.h"
+#import "CreditScene.h"
 #import "KWMusicManager.h"
 /*
  無名カテゴリ
@@ -21,7 +22,7 @@
  */
 @interface TitleScene()
 - (void)pressStartButton:(id)sender; // "はじめる"ボタンを押したときに呼ばれるメソッド
-- (void)pressExitButton:(id)sender;  // "おわる"ボタンを押したときに呼ばれるメソッド
+- (void)pressCreditButton:(id)sender;// "くれじっと！"ボタンを押したときに呼ばれるメソッド
 - (void)pressHowtoButton:(id)sender; // "あそびかた"ボタンを押したときに呼ばれるメソッド
 @end
 
@@ -41,15 +42,15 @@
                                                     selectedImage:@"start_selected.png" // 押したときの画像
                                                            target:self         // 押したときに呼び出すメソッドがどこにあるか
                                                          selector:@selector(pressStartButton:)]; // 押したときに呼び出すメソッド
-    CCMenuItemImage* exit  = [CCMenuItemImage itemFromNormalImage:@"exit.png" 
-                                                    selectedImage:@"exit_selected.png" 
-                                                           target:self 
-                                                         selector:@selector(pressExitButton:)];
+    CCMenuItemImage* credit  = [CCMenuItemImage itemFromNormalImage:@"credit.png" 
+                                                      selectedImage:@"credit_selected.png" 
+                                                             target:self 
+                                                           selector:@selector(pressCreditButton:)];
     CCMenuItemImage* howto = [CCMenuItemImage itemFromNormalImage:@"howto.png" 
                                                     selectedImage:@"howto_selected.png" 
                                                            target:self 
                                                          selector:@selector(pressHowtoButton:)];
-    CCMenu* menu = [CCMenu menuWithItems:howto, start, exit, nil]; // 生成した各MenuItemからメニューを作る
+    CCMenu* menu = [CCMenu menuWithItems:howto, start, credit, nil]; // 生成した各MenuItemからメニューを作る
     [menu alignItemsHorizontally]; // メニューを横並びにする
     menu.position = ccp(winSize_.width/2, 40); // メニューの中心位置を設定
     // レイヤーに追加
@@ -68,10 +69,10 @@
   [mm fadeout:0.5];
 }
 
-- (void)pressExitButton:(id)sender{
-  // "おわる"ボタンを押したときの処理
-  // いろいろ調べた結果、iOS3.0以降では、プログラムからアプリを終了できない様子
-  // というわけで何もしない
+- (void)pressCreditButton:(id)sender{
+  [[SimpleAudioEngine sharedEngine] playEffect:@"pico.caf"];
+  CCTransitionFade* transition = [CCTransitionCrossFade transitionWithDuration:0.5f scene:[CreditScene scene]];
+  [[CCDirector sharedDirector] pushScene:transition];
 }
 
 - (void)pressHowtoButton:(id)sender{
