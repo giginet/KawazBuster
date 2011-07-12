@@ -38,12 +38,6 @@
 		074CB05713A757E4006FB6EC /* title_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB04D13A757E4006FB6EC /* title_background.png */; };
 		074CB05B13A759A7006FB6EC /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB05A13A759A5006FB6EC /* TitleScene.m */; };
 		074CB05E13A759E4006FB6EC /* LogoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB05D13A759E3006FB6EC /* LogoScene.m */; };
-		0766E9DA13B281020007E7F3 /* howto_button-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D413B281020007E7F3 /* howto_button-hd.png */; };
-		0766E9DB13B281020007E7F3 /* howto_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D513B281020007E7F3 /* howto_button.png */; };
-		0766E9DC13B281020007E7F3 /* howto0-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D613B281020007E7F3 /* howto0-hd.png */; };
-		0766E9DD13B281020007E7F3 /* howto0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D713B281020007E7F3 /* howto0.png */; };
-		0766E9DE13B281020007E7F3 /* howto1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D813B281020007E7F3 /* howto1-hd.png */; };
-		0766E9DF13B281020007E7F3 /* howto1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0766E9D913B281020007E7F3 /* howto1.png */; };
 		076A4E3E13A770AE00C04B06 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A4E3D13A770AE00C04B06 /* MainScene.m */; };
 		076A4E4513A7775F00C04B06 /* main_background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E3F13A7775C00C04B06 /* main_background-hd.png */; };
 		076A4E4613A7775F00C04B06 /* main_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A4E4013A7775D00C04B06 /* main_background.png */; };
@@ -76,6 +70,14 @@
 		07878C8413AF75870095E794 /* time_up.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07878C8013AF75870095E794 /* time_up.caf */; };
 		078EE48513BCC6580025C745 /* credit_background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EE48313BCC6580025C745 /* credit_background-hd.png */; };
 		078EE48613BCC6580025C745 /* credit_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EE48413BCC6580025C745 /* credit_background.png */; };
+		079A170613CC4E4900BBA28D /* howto_button-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 079A170013CC4E4900BBA28D /* howto_button-hd.png */; };
+		079A170713CC4E4900BBA28D /* howto_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 079A170113CC4E4900BBA28D /* howto_button.png */; };
+		079A170813CC4E4900BBA28D /* howto0-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 079A170213CC4E4900BBA28D /* howto0-hd.png */; };
+		079A170913CC4E4900BBA28D /* howto0.png in Resources */ = {isa = PBXBuildFile; fileRef = 079A170313CC4E4900BBA28D /* howto0.png */; };
+		079A170A13CC4E4900BBA28D /* howto1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 079A170413CC4E4900BBA28D /* howto1-hd.png */; };
+		079A170B13CC4E4900BBA28D /* howto1.png in Resources */ = {isa = PBXBuildFile; fileRef = 079A170513CC4E4900BBA28D /* howto1.png */; };
+		079A170E13CC4EC800BBA28D /* howto_button_selected-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 079A170C13CC4EC800BBA28D /* howto_button_selected-hd.png */; };
+		079A170F13CC4EC800BBA28D /* howto_button_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 079A170D13CC4EC800BBA28D /* howto_button_selected.png */; };
 		079D7B9D13B3CB5E004D9704 /* KawazTan.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D7B9C13B3CB5E004D9704 /* KawazTan.m */; };
 		079D7BA013B3CB6B004D9704 /* HowtoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D7B9F13B3CB6B004D9704 /* HowtoScene.m */; };
 		079D7BA713B3CB92004D9704 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 079D7BA113B3CB92004D9704 /* Icon-72.png */; };
@@ -262,12 +264,6 @@
 		074CB05A13A759A5006FB6EC /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
 		074CB05C13A759E1006FB6EC /* LogoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoScene.h; sourceTree = "<group>"; };
 		074CB05D13A759E3006FB6EC /* LogoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoScene.m; sourceTree = "<group>"; };
-		0766E9D413B281020007E7F3 /* howto_button-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "howto_button-hd.png"; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto_button-hd.png"; sourceTree = "<group>"; };
-		0766E9D513B281020007E7F3 /* howto_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howto_button.png; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto_button.png"; sourceTree = "<group>"; };
-		0766E9D613B281020007E7F3 /* howto0-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "howto0-hd.png"; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto0-hd.png"; sourceTree = "<group>"; };
-		0766E9D713B281020007E7F3 /* howto0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howto0.png; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto0.png"; sourceTree = "<group>"; };
-		0766E9D813B281020007E7F3 /* howto1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "howto1-hd.png"; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto1-hd.png"; sourceTree = "<group>"; };
-		0766E9D913B281020007E7F3 /* howto1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howto1.png; path = "../../../../../../Users/giginet/Dropbox/KawazBuster/tawasi/遊び方画像/howto1.png"; sourceTree = "<group>"; };
 		076A4E3C13A770AD00C04B06 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
 		076A4E3D13A770AE00C04B06 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
 		076A4E3F13A7775C00C04B06 /* main_background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "main_background-hd.png"; path = "Resources/image/main/main_background-hd.png"; sourceTree = "<group>"; };
@@ -301,6 +297,14 @@
 		07878C8013AF75870095E794 /* time_up.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = time_up.caf; path = Resources/se/time_up.caf; sourceTree = "<group>"; };
 		078EE48313BCC6580025C745 /* credit_background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "credit_background-hd.png"; path = "Resources/image/credit/credit_background-hd.png"; sourceTree = "<group>"; };
 		078EE48413BCC6580025C745 /* credit_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = credit_background.png; path = Resources/image/credit/credit_background.png; sourceTree = "<group>"; };
+		079A170013CC4E4900BBA28D /* howto_button-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "howto_button-hd.png"; path = "Resources/image/howto/howto_button-hd.png"; sourceTree = "<group>"; };
+		079A170113CC4E4900BBA28D /* howto_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howto_button.png; path = Resources/image/howto/howto_button.png; sourceTree = "<group>"; };
+		079A170213CC4E4900BBA28D /* howto0-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "howto0-hd.png"; path = "Resources/image/howto/howto0-hd.png"; sourceTree = "<group>"; };
+		079A170313CC4E4900BBA28D /* howto0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howto0.png; path = Resources/image/howto/howto0.png; sourceTree = "<group>"; };
+		079A170413CC4E4900BBA28D /* howto1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "howto1-hd.png"; path = "Resources/image/howto/howto1-hd.png"; sourceTree = "<group>"; };
+		079A170513CC4E4900BBA28D /* howto1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howto1.png; path = Resources/image/howto/howto1.png; sourceTree = "<group>"; };
+		079A170C13CC4EC800BBA28D /* howto_button_selected-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "howto_button_selected-hd.png"; path = "Resources/image/howto/howto_button_selected-hd.png"; sourceTree = "<group>"; };
+		079A170D13CC4EC800BBA28D /* howto_button_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howto_button_selected.png; path = Resources/image/howto/howto_button_selected.png; sourceTree = "<group>"; };
 		079D7B9B13B3CB5E004D9704 /* KawazTan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KawazTan.h; sourceTree = "<group>"; };
 		079D7B9C13B3CB5E004D9704 /* KawazTan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KawazTan.m; sourceTree = "<group>"; };
 		079D7B9E13B3CB6B004D9704 /* HowtoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowtoScene.h; sourceTree = "<group>"; };
@@ -687,12 +691,14 @@
 		0766E9D213B27D7E0007E7F3 /* howto */ = {
 			isa = PBXGroup;
 			children = (
-				0766E9D413B281020007E7F3 /* howto_button-hd.png */,
-				0766E9D513B281020007E7F3 /* howto_button.png */,
-				0766E9D613B281020007E7F3 /* howto0-hd.png */,
-				0766E9D713B281020007E7F3 /* howto0.png */,
-				0766E9D813B281020007E7F3 /* howto1-hd.png */,
-				0766E9D913B281020007E7F3 /* howto1.png */,
+				079A170C13CC4EC800BBA28D /* howto_button_selected-hd.png */,
+				079A170D13CC4EC800BBA28D /* howto_button_selected.png */,
+				079A170013CC4E4900BBA28D /* howto_button-hd.png */,
+				079A170113CC4E4900BBA28D /* howto_button.png */,
+				079A170213CC4E4900BBA28D /* howto0-hd.png */,
+				079A170313CC4E4900BBA28D /* howto0.png */,
+				079A170413CC4E4900BBA28D /* howto1-hd.png */,
+				079A170513CC4E4900BBA28D /* howto1.png */,
 			);
 			name = howto;
 			sourceTree = "<group>";
@@ -712,6 +718,7 @@
 				074CB05A13A759A5006FB6EC /* TitleScene.m */,
 			);
 			name = Scenes;
+			path = KawazBuster;
 			sourceTree = "<group>";
 		};
 		0766EA6F13B383D90007E7F3 /* result */ = {
@@ -787,6 +794,7 @@
 		07FC8FC1138EAEE4000D5ADB = {
 			isa = PBXGroup;
 			children = (
+				0766E9E013B281150007E7F3 /* Scenes */,
 				07FC8FE0138EAEE5000D5ADB /* KawazBuster */,
 				07FC8FCF138EAEE5000D5ADB /* Frameworks */,
 				07FC8FCD138EAEE5000D5ADB /* Products */,
@@ -819,7 +827,6 @@
 		07FC8FE0138EAEE5000D5ADB /* KawazBuster */ = {
 			isa = PBXGroup;
 			children = (
-				0766E9E013B281150007E7F3 /* Scenes */,
 				07FC9132138EAEE8000D5ADB /* AppDelegate.h */,
 				07FC9133138EAEE8000D5ADB /* AppDelegate.m */,
 				07FC9135138EAEE8000D5ADB /* RootViewController.h */,
@@ -1288,12 +1295,6 @@
 				07878C8213AF75870095E794 /* fire.caf in Resources */,
 				07878C8313AF75870095E794 /* pico.caf in Resources */,
 				07878C8413AF75870095E794 /* time_up.caf in Resources */,
-				0766E9DA13B281020007E7F3 /* howto_button-hd.png in Resources */,
-				0766E9DB13B281020007E7F3 /* howto_button.png in Resources */,
-				0766E9DC13B281020007E7F3 /* howto0-hd.png in Resources */,
-				0766E9DD13B281020007E7F3 /* howto0.png in Resources */,
-				0766E9DE13B281020007E7F3 /* howto1-hd.png in Resources */,
-				0766E9DF13B281020007E7F3 /* howto1.png in Resources */,
 				079D7BA713B3CB92004D9704 /* Icon-72.png in Resources */,
 				079D7BA813B3CB92004D9704 /* Icon-Small-50.png in Resources */,
 				079D7BA913B3CB92004D9704 /* Icon-Small.png in Resources */,
@@ -1339,6 +1340,14 @@
 				071681E013BC8BFC00E992C9 /* credit1-hd.png in Resources */,
 				078EE48513BCC6580025C745 /* credit_background-hd.png in Resources */,
 				078EE48613BCC6580025C745 /* credit_background.png in Resources */,
+				079A170613CC4E4900BBA28D /* howto_button-hd.png in Resources */,
+				079A170713CC4E4900BBA28D /* howto_button.png in Resources */,
+				079A170813CC4E4900BBA28D /* howto0-hd.png in Resources */,
+				079A170913CC4E4900BBA28D /* howto0.png in Resources */,
+				079A170A13CC4E4900BBA28D /* howto1-hd.png in Resources */,
+				079A170B13CC4E4900BBA28D /* howto1.png in Resources */,
+				079A170E13CC4EC800BBA28D /* howto_button_selected-hd.png in Resources */,
+				079A170F13CC4EC800BBA28D /* howto_button_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1486,6 +1495,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -1503,6 +1513,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};
@@ -1519,6 +1530,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1536,6 +1548,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
